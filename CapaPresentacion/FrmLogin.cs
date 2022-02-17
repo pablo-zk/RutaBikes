@@ -21,5 +21,25 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            if(String.IsNullOrWhiteSpace(txtEmail.Text) || String.IsNullOrWhiteSpace(txtContrasena.Text))
+            {
+                MessageBox.Show("Debes rellenar todos los campos");
+                return;
+            }
+            if (Program.gestor.Login(txtEmail.Text, txtContrasena.Text))
+            {
+                FrmHome frm = new FrmHome();
+                this.Hide();
+                frm.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Email o contraseña incorrecto.");
+            }
+        }
     }
 }

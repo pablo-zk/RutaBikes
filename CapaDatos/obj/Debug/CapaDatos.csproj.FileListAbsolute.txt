@@ -1,0 +1,15 @@
+C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\CapaDatos\obj\Debug\CapaDatos.csproj.AssemblyReference.cache
+C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
+C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\CapaDatos\bin\Debug\CapaDatos.dll.config
+C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\CapaDatos\bin\Debug\CapaDatos.dll
+C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\CapaDatos\bin\Debug\Entidades.dll
+C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\CapaDatos\bin\Debug\EntityFramework.dll
+C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\CapaDatos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\CapaDatos\bin\Debug\Entidades.pdb
+C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\CapaDatos\bin\Debug\Entidades.dll.config
+C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\CapaDatos\bin\Debug\EntityFramework.xml
+C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\CapaDatos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete
+C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\CapaDatos\obj\Debug\CapaDatos.dll
+C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\CapaDatos\obj\Debug\CapaDatos.pdb

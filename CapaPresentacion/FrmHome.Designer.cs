@@ -31,7 +31,10 @@ namespace CapaPresentacion
         {
             this.dgvEstaciones = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.dgvAnclaje = new System.Windows.Forms.DataGridView();
+            this.lblAnclaje = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstaciones)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAnclaje)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvEstaciones
@@ -41,6 +44,7 @@ namespace CapaPresentacion
             this.dgvEstaciones.Name = "dgvEstaciones";
             this.dgvEstaciones.Size = new System.Drawing.Size(421, 150);
             this.dgvEstaciones.TabIndex = 0;
+            this.dgvEstaciones.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEstaciones_CellClick);
             // 
             // label1
             // 
@@ -52,17 +56,38 @@ namespace CapaPresentacion
             this.label1.TabIndex = 1;
             this.label1.Text = "ESTACIONES";
             // 
+            // dgvAnclaje
+            // 
+            this.dgvAnclaje.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAnclaje.Location = new System.Drawing.Point(330, 272);
+            this.dgvAnclaje.Name = "dgvAnclaje";
+            this.dgvAnclaje.Size = new System.Drawing.Size(421, 150);
+            this.dgvAnclaje.TabIndex = 2;
+            // 
+            // lblAnclaje
+            // 
+            this.lblAnclaje.AutoSize = true;
+            this.lblAnclaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAnclaje.Location = new System.Drawing.Point(651, 237);
+            this.lblAnclaje.Name = "lblAnclaje";
+            this.lblAnclaje.Size = new System.Drawing.Size(100, 20);
+            this.lblAnclaje.TabIndex = 3;
+            this.lblAnclaje.Text = "ANCLAJES";
+            // 
             // FrmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblAnclaje);
+            this.Controls.Add(this.dgvAnclaje);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvEstaciones);
             this.Name = "FrmHome";
             this.Text = "FrmHome";
             this.Load += new System.EventHandler(this.FrmHome_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstaciones)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAnclaje)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -72,5 +97,7 @@ namespace CapaPresentacion
 
         private System.Windows.Forms.DataGridView dgvEstaciones;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dgvAnclaje;
+        private System.Windows.Forms.Label lblAnclaje;
     }
 }

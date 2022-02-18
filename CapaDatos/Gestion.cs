@@ -20,5 +20,10 @@ namespace CapaDatos
         {
             return bikeEntities.Estacions.ToList();
         }
+
+        public List<Anclaje> ObtenerAnclajesDeEstacion(int idEstacion)
+        {
+            return bikeEntities.Anclajes.Where(a => a.idEstacion == idEstacion).ToList();
+        }
     }
 }

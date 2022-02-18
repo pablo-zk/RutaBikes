@@ -34,7 +34,6 @@ namespace CapaPresentacion
                 FrmHome frm = new FrmHome();
                 this.Hide();
                 frm.Show();
-                this.Close();
             }
             else
             {

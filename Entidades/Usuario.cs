@@ -19,7 +19,16 @@ namespace Entidades
         {
             this.Viajes = new HashSet<Viaje>();
         }
-    
+
+        public Usuario(string email, string contrasena, int telefono, string numCuenta, double monedero)
+        {
+            this.email = email;
+            this.contrasena = contrasena;
+            this.telefono = telefono;
+            this.numCuenta = numCuenta;
+            this.monedero = monedero;
+        }
+
         public int id { get; set; }
         public string email { get; set; }
         public string contrasena { get; set; }

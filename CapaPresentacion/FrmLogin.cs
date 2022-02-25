@@ -19,7 +19,8 @@ namespace CapaPresentacion
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            grpLogin.Visible = true;
+            grpSignup.Visible = false;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -39,6 +40,23 @@ namespace CapaPresentacion
             {
                 MessageBox.Show("Email o contraseña incorrecto.");
             }
+        }
+
+        private void linkSignup_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            grpLogin.Visible = false;
+            grpSignup.Visible = true;
+        }
+
+        private void linkLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            grpLogin.Visible = true;
+            grpSignup.Visible = false;
+        }
+
+        private void btnSignup_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

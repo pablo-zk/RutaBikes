@@ -21,6 +21,7 @@ namespace CapaPresentacion
 
         private void FrmHome_Load(object sender, EventArgs e)
         {
+            this.Text = $"Bienvenido {Program.userActive.email}!!";
             List<Estacion> estaciones = Program.gestor.ObtenerEstaciones();
             dgvEstaciones.DataSource = estaciones.Select(est => new
             {
@@ -29,6 +30,7 @@ namespace CapaPresentacion
                 AnclajesLibres = est.Anclajes.Count(a => a.idBici == null),
                 BicisDisponibles = est.Anclajes.Count(a => a.idBici != null),
             }).ToArray();
+            btnIniciarViaje.Enabled = false;
         }
 
         private void dgvEstaciones_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -43,11 +45,37 @@ namespace CapaPresentacion
             {
                 return;
             }
+            btnIniciarViaje.Enabled = true;
             string idEstacion = row.Cells["NumEstacion"].Value.ToString();
             List<Anclaje> anclajes = Program.gestor.ObtenerAnclajesDeEstacion(int.Parse(idEstacion));
             dgvAnclaje.DataSource = anclajes.Select(a => new { 
+                IdentificadorAnclaje = a.id,
                 Bicicletas = a.idBici == null ? "Libre" : a.idBici,
             }).ToArray();
+        }
+
+        private void btnIniciarViaje_Click(object sender, EventArgs e)
+        {
+            if(dgvAnclaje.CurrentRow == null)
+            {
+                MessageBox.Show("Debes seleccionar una estación y después una bicicleta");
+                return;
+            }
+            string idAnclajeIni = dgvAnclaje.CurrentRow.Cells["IdentificadorAnclaje"].Value.ToString();
+            if (idAnclajeIni != null)
+            {
+                string result = Program.gestor.IniciarViaje(Program.userActive.id, int.Parse(idAnclajeIni), new DateTime());
+                MessageBox.Show(result);
+            }
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Program.userActive = null;
+            //TODO No sé si se abren 500000 formularios de inicio de sesión o solo se muestra el primero que le hacemos Hide()
+            FrmLogin frm = new FrmLogin();
+            frm.Show();
+            Close();
         }
     }
 }

@@ -20,3 +20,4 @@ C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\CapaPre
 C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\CapaPresentacion\bin\Debug\Entidades.pdb
 C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\CapaPresentacion\bin\Debug\Entidades.dll.config
 C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacion.FrmHome.resources
+C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacion.FrmViaje.resources

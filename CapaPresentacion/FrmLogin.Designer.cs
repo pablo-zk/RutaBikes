@@ -32,21 +32,21 @@ namespace CapaPresentacion
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
-            this.txtContrasena = new System.Windows.Forms.TextBox();
+            this.txtPass = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnSignup = new System.Windows.Forms.Button();
             this.lblRegistrarse = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSignRepeatPass = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtSignPass = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtSignMail = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.txtSignTelefono = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtNumCuenta = new System.Windows.Forms.TextBox();
+            this.txtSignNumCuenta = new System.Windows.Forms.TextBox();
             this.grpLogin = new System.Windows.Forms.GroupBox();
             this.grpSignup = new System.Windows.Forms.GroupBox();
             this.linkLogin = new System.Windows.Forms.LinkLabel();
@@ -83,13 +83,13 @@ namespace CapaPresentacion
             this.lblPassword.TabIndex = 3;
             this.lblPassword.Text = "Contraseña";
             // 
-            // txtContrasena
+            // txtPass
             // 
-            this.txtContrasena.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContrasena.Location = new System.Drawing.Point(93, 147);
-            this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.Size = new System.Drawing.Size(178, 23);
-            this.txtContrasena.TabIndex = 2;
+            this.txtPass.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPass.Location = new System.Drawing.Point(93, 147);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(178, 23);
+            this.txtPass.TabIndex = 2;
             // 
             // label4
             // 
@@ -158,16 +158,14 @@ namespace CapaPresentacion
             this.label2.Size = new System.Drawing.Size(114, 15);
             this.label2.TabIndex = 13;
             this.label2.Text = "Repetir contraseña";
-            this.label2.Visible = false;
             // 
-            // textBox1
+            // txtSignRepeatPass
             // 
-            this.textBox1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(129, 169);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(148, 23);
-            this.textBox1.TabIndex = 12;
-            this.textBox1.Visible = false;
+            this.txtSignRepeatPass.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSignRepeatPass.Location = new System.Drawing.Point(129, 169);
+            this.txtSignRepeatPass.Name = "txtSignRepeatPass";
+            this.txtSignRepeatPass.Size = new System.Drawing.Size(148, 23);
+            this.txtSignRepeatPass.TabIndex = 12;
             // 
             // label5
             // 
@@ -179,13 +177,13 @@ namespace CapaPresentacion
             this.label5.TabIndex = 11;
             this.label5.Text = "Contraseña";
             // 
-            // textBox2
+            // txtSignPass
             // 
-            this.textBox2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(99, 123);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(178, 23);
-            this.textBox2.TabIndex = 10;
+            this.txtSignPass.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSignPass.Location = new System.Drawing.Point(99, 123);
+            this.txtSignPass.Name = "txtSignPass";
+            this.txtSignPass.Size = new System.Drawing.Size(178, 23);
+            this.txtSignPass.TabIndex = 10;
             // 
             // label6
             // 
@@ -197,13 +195,13 @@ namespace CapaPresentacion
             this.label6.TabIndex = 9;
             this.label6.Text = "Email";
             // 
-            // textBox4
+            // txtSignMail
             // 
-            this.textBox4.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(99, 77);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(178, 23);
-            this.textBox4.TabIndex = 8;
+            this.txtSignMail.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSignMail.Location = new System.Drawing.Point(99, 77);
+            this.txtSignMail.Name = "txtSignMail";
+            this.txtSignMail.Size = new System.Drawing.Size(178, 23);
+            this.txtSignMail.TabIndex = 8;
             // 
             // label3
             // 
@@ -215,13 +213,13 @@ namespace CapaPresentacion
             this.label3.TabIndex = 17;
             this.label3.Text = "Teléfono";
             // 
-            // txtTelefono
+            // txtSignTelefono
             // 
-            this.txtTelefono.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefono.Location = new System.Drawing.Point(99, 216);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(178, 23);
-            this.txtTelefono.TabIndex = 16;
+            this.txtSignTelefono.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSignTelefono.Location = new System.Drawing.Point(99, 216);
+            this.txtSignTelefono.Name = "txtSignTelefono";
+            this.txtSignTelefono.Size = new System.Drawing.Size(178, 23);
+            this.txtSignTelefono.TabIndex = 16;
             // 
             // label7
             // 
@@ -234,20 +232,19 @@ namespace CapaPresentacion
             this.label7.Text = "Numero cuenta";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txtNumCuenta
+            // txtSignNumCuenta
             // 
-            this.txtNumCuenta.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumCuenta.Location = new System.Drawing.Point(114, 263);
-            this.txtNumCuenta.Name = "txtNumCuenta";
-            this.txtNumCuenta.Size = new System.Drawing.Size(163, 23);
-            this.txtNumCuenta.TabIndex = 18;
+            this.txtSignNumCuenta.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSignNumCuenta.Location = new System.Drawing.Point(114, 263);
+            this.txtSignNumCuenta.Name = "txtSignNumCuenta";
+            this.txtSignNumCuenta.Size = new System.Drawing.Size(163, 23);
+            this.txtSignNumCuenta.TabIndex = 18;
             // 
             // grpLogin
             // 
-            this.grpLogin.Controls.Add(this.grpSignup);
             this.grpLogin.Controls.Add(this.linkSignup);
             this.grpLogin.Controls.Add(this.label4);
-            this.grpLogin.Controls.Add(this.txtContrasena);
+            this.grpLogin.Controls.Add(this.txtPass);
             this.grpLogin.Controls.Add(this.txtEmail);
             this.grpLogin.Controls.Add(this.lblEmail);
             this.grpLogin.Controls.Add(this.lblPassword);
@@ -264,17 +261,17 @@ namespace CapaPresentacion
             this.grpSignup.Controls.Add(this.linkLogin);
             this.grpSignup.Controls.Add(this.lblRegistrarse);
             this.grpSignup.Controls.Add(this.label7);
-            this.grpSignup.Controls.Add(this.textBox4);
-            this.grpSignup.Controls.Add(this.txtNumCuenta);
+            this.grpSignup.Controls.Add(this.txtSignMail);
+            this.grpSignup.Controls.Add(this.txtSignNumCuenta);
             this.grpSignup.Controls.Add(this.label6);
             this.grpSignup.Controls.Add(this.label3);
-            this.grpSignup.Controls.Add(this.textBox2);
-            this.grpSignup.Controls.Add(this.txtTelefono);
+            this.grpSignup.Controls.Add(this.txtSignPass);
+            this.grpSignup.Controls.Add(this.txtSignTelefono);
             this.grpSignup.Controls.Add(this.label5);
             this.grpSignup.Controls.Add(this.btnSignup);
-            this.grpSignup.Controls.Add(this.textBox1);
+            this.grpSignup.Controls.Add(this.txtSignRepeatPass);
             this.grpSignup.Controls.Add(this.label2);
-            this.grpSignup.Location = new System.Drawing.Point(0, 0);
+            this.grpSignup.Location = new System.Drawing.Point(341, 12);
             this.grpSignup.Name = "grpSignup";
             this.grpSignup.Size = new System.Drawing.Size(290, 379);
             this.grpSignup.TabIndex = 21;
@@ -308,7 +305,8 @@ namespace CapaPresentacion
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(338, 412);
+            this.ClientSize = new System.Drawing.Size(658, 412);
+            this.Controls.Add(this.grpSignup);
             this.Controls.Add(this.grpLogin);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "FrmLogin";
@@ -327,21 +325,21 @@ namespace CapaPresentacion
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.TextBox txtContrasena;
+        private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnSignup;
         private System.Windows.Forms.Label lblRegistrarse;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSignRepeatPass;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtSignPass;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtSignMail;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtTelefono;
+        private System.Windows.Forms.TextBox txtSignTelefono;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtNumCuenta;
+        private System.Windows.Forms.TextBox txtSignNumCuenta;
         private System.Windows.Forms.GroupBox grpLogin;
         private System.Windows.Forms.LinkLabel linkSignup;
         private System.Windows.Forms.GroupBox grpSignup;

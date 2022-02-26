@@ -21,7 +21,19 @@ namespace Entidades
         public Nullable<int> idAnclajeIni { get; set; }
         public Nullable<int> idAnclajeFin { get; set; }
         public double precio { get; set; }
-    
+
+        public Viaje() { }
+
+        public Viaje(int? idUser, DateTime fechaInicio, Anclaje anclaje, Usuario usuario)
+        {
+            this.idUser = idUser;
+            this.fechaInicio = fechaInicio;
+            this.precio = 0.70;
+            Anclaje = anclaje;
+            this.idAnclajeIni = anclaje.id;
+            Usuario = usuario;
+        }
+
         public virtual Anclaje Anclaje { get; set; }
         public virtual Anclaje Anclaje1 { get; set; }
         public virtual Usuario Usuario { get; set; }

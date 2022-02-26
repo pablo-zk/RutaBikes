@@ -10,6 +10,7 @@ namespace CapaPresentacion
 {
     static class Program
     {
+        static public Usuario userActive = null;
         static public Gestion gestor = new Gestion();
         static public GestionDS gestorDS;
         /// <summary>

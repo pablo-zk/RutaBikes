@@ -11,7 +11,7 @@ namespace Entidades
 {
     using System;
     using System.Collections.Generic;
-    
+
     public partial class Usuario
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -35,7 +35,7 @@ namespace Entidades
         public int telefono { get; set; }
         public string numCuenta { get; set; }
         public double monedero { get; set; }
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Viaje> Viajes { get; set; }
     }

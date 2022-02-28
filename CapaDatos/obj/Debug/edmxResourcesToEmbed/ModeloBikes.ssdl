@@ -47,8 +47,9 @@
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="idUser" Type="int" />
-    <Property Name="fechaInicio" Type="datetime" Nullable="false" />
-    <Property Name="fechaFin" Type="datetime" Nullable="false" />
+    <Property Name="idBici" Type="varchar" MaxLength="6" />
+    <Property Name="fechaInicio" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="fechaFin" Type="datetime2" Precision="7" Nullable="false" />
     <Property Name="idAnclajeIni" Type="int" />
     <Property Name="idAnclajeFin" Type="int" />
     <Property Name="precio" Type="float" Nullable="false" />
@@ -77,7 +78,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Viaje__idAnclaje__2F10007B">
+  <Association Name="FK__Viaje__idAnclaje__4F7CD00D">
     <End Role="Anclaje" Type="Self.Anclaje" Multiplicity="0..1" />
     <End Role="Viaje" Type="Self.Viaje" Multiplicity="*" />
     <ReferentialConstraint>
@@ -89,7 +90,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Viaje__idAnclaje__300424B4">
+  <Association Name="FK__Viaje__idAnclaje__5070F446">
     <End Role="Anclaje" Type="Self.Anclaje" Multiplicity="0..1" />
     <End Role="Viaje" Type="Self.Viaje" Multiplicity="*" />
     <ReferentialConstraint>
@@ -101,7 +102,19 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Viaje__idUser__2E1BDC42">
+  <Association Name="FK__Viaje__idBici__4E88ABD4">
+    <End Role="Bicicleta" Type="Self.Bicicleta" Multiplicity="0..1" />
+    <End Role="Viaje" Type="Self.Viaje" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bicicleta">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Viaje">
+        <PropertyRef Name="idBici" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Viaje__idUser__4D94879B">
     <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
     <End Role="Viaje" Type="Self.Viaje" Multiplicity="*" />
     <ReferentialConstraint>
@@ -128,15 +141,19 @@
       <End Role="Estacion" EntitySet="Estacion" />
       <End Role="Anclaje" EntitySet="Anclaje" />
     </AssociationSet>
-    <AssociationSet Name="FK__Viaje__idAnclaje__2F10007B" Association="Self.FK__Viaje__idAnclaje__2F10007B">
+    <AssociationSet Name="FK__Viaje__idAnclaje__4F7CD00D" Association="Self.FK__Viaje__idAnclaje__4F7CD00D">
       <End Role="Anclaje" EntitySet="Anclaje" />
       <End Role="Viaje" EntitySet="Viaje" />
     </AssociationSet>
-    <AssociationSet Name="FK__Viaje__idAnclaje__300424B4" Association="Self.FK__Viaje__idAnclaje__300424B4">
+    <AssociationSet Name="FK__Viaje__idAnclaje__5070F446" Association="Self.FK__Viaje__idAnclaje__5070F446">
       <End Role="Anclaje" EntitySet="Anclaje" />
       <End Role="Viaje" EntitySet="Viaje" />
     </AssociationSet>
-    <AssociationSet Name="FK__Viaje__idUser__2E1BDC42" Association="Self.FK__Viaje__idUser__2E1BDC42">
+    <AssociationSet Name="FK__Viaje__idBici__4E88ABD4" Association="Self.FK__Viaje__idBici__4E88ABD4">
+      <End Role="Bicicleta" EntitySet="Bicicleta" />
+      <End Role="Viaje" EntitySet="Viaje" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Viaje__idUser__4D94879B" Association="Self.FK__Viaje__idUser__4D94879B">
       <End Role="Usuario" EntitySet="Usuario" />
       <End Role="Viaje" EntitySet="Viaje" />
     </AssociationSet>

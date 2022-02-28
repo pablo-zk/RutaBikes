@@ -65,6 +65,7 @@ namespace CapaPresentacion
                 return;
             }
             string idAnclaje = dgvAnclaje.CurrentRow.Cells["IdentificadorAnclaje"].Value.ToString();
+            string idBici = dgvAnclaje.CurrentRow.Cells["Bicicletas"].Value.ToString();
             if (idAnclaje != null)
             {
                 if (btnIniciarViaje.Text.Contains("CERRAR"))
@@ -74,7 +75,7 @@ namespace CapaPresentacion
                 }
                 else
                 {
-                    string result = Program.gestor.IniciarViaje(Program.userActive.id, int.Parse(idAnclaje), DateTime.Now);
+                    string result = Program.gestor.IniciarViaje(Program.userActive.id, int.Parse(idAnclaje), DateTime.Now, idBici);
                     MessageBox.Show(result);
                 }
             }

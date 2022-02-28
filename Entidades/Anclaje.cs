@@ -24,12 +24,7 @@ namespace Entidades
         public int idEstacion { get; set; }
         public int id { get; set; }
         public string idBici { get; set; }
-        public Anclaje(int idEstacion, int id, string idBici)
-        {
-            this.idEstacion = idEstacion;
-            this.id = id;
-            this.idBici = idBici;
-        }
+    
         public virtual Bicicleta Bicicleta { get; set; }
         public virtual Estacion Estacion { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

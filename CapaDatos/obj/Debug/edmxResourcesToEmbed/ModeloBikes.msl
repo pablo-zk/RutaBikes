@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="RutaBikesDbModelStoreContainer" CdmEntityContainer="RutaBikesDbEntities">
+  <EntityContainerMapping StorageEntityContainer="RutaBikesDbModelStoreContainer" CdmEntityContainer="RutaBikesDbEntitiesN">
     <EntitySetMapping Name="Anclajes">
       <EntityTypeMapping TypeName="RutaBikesDbModel.Anclaje">
         <MappingFragment StoreEntitySet="Anclaje">
@@ -52,6 +52,7 @@
         <MappingFragment StoreEntitySet="Viaje">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="idUser" ColumnName="idUser" />
+          <ScalarProperty Name="idBici" ColumnName="idBici" />
           <ScalarProperty Name="fechaInicio" ColumnName="fechaInicio" />
           <ScalarProperty Name="fechaFin" ColumnName="fechaFin" />
           <ScalarProperty Name="idAnclajeIni" ColumnName="idAnclajeIni" />

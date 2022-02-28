@@ -54,10 +54,10 @@
     <Compile Include="Bicicleta.cs">
       <DependentUpon>ModeloBikes.tt</DependentUpon>
     </Compile>
-    <Compile Include="EstacionDTO.cs" />
     <Compile Include="Estacion.cs">
       <DependentUpon>ModeloBikes.tt</DependentUpon>
     </Compile>
+    <Compile Include="EstacionDTO.cs" />
     <Compile Include="ModeloBikes.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -85,6 +85,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="ModeloBikes.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ModeloBikes.Context.cs</LastGenOutput>
@@ -93,9 +96,6 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ModeloBikes.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

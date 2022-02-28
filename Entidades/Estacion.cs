@@ -25,12 +25,5 @@ namespace Entidades
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Anclaje> Anclajes { get; set; }
-
-        public Estacion(int id, string ubicacion, ICollection<Anclaje> anclajes)
-        {
-            this.id = id;
-            this.ubicacion = ubicacion;
-            Anclajes = anclajes;
-        }
     }
 }

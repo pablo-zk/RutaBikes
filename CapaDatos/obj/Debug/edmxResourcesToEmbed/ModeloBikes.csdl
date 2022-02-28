@@ -9,8 +9,8 @@
     <Property Name="idBici" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Bicicleta" Relationship="Self.FK__Anclaje__idBici__2B3F6F97" FromRole="Anclaje" ToRole="Bicicleta" />
     <NavigationProperty Name="Estacion" Relationship="Self.FK__Anclaje__idEstac__2A4B4B5E" FromRole="Anclaje" ToRole="Estacion" />
-    <NavigationProperty Name="Viajes" Relationship="Self.FK__Viaje__idAnclaje__2F10007B" FromRole="Anclaje" ToRole="Viaje" />
-    <NavigationProperty Name="Viajes1" Relationship="Self.FK__Viaje__idAnclaje__300424B4" FromRole="Anclaje" ToRole="Viaje" />
+    <NavigationProperty Name="Viajes" Relationship="Self.FK__Viaje__idAnclaje__4F7CD00D" FromRole="Anclaje" ToRole="Viaje" />
+    <NavigationProperty Name="Viajes1" Relationship="Self.FK__Viaje__idAnclaje__5070F446" FromRole="Anclaje" ToRole="Viaje" />
   </EntityType>
   <EntityType Name="Bicicleta">
     <Key>
@@ -18,6 +18,7 @@
     </Key>
     <Property Name="id" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="Anclajes" Relationship="Self.FK__Anclaje__idBici__2B3F6F97" FromRole="Bicicleta" ToRole="Anclaje" />
+    <NavigationProperty Name="Viajes" Relationship="Self.FK__Viaje__idBici__4E88ABD4" FromRole="Bicicleta" ToRole="Viaje" />
   </EntityType>
   <EntityType Name="Estacion">
     <Key>
@@ -46,7 +47,7 @@
     <Property Name="telefono" Type="Int32" Nullable="false" />
     <Property Name="numCuenta" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="monedero" Type="Double" Nullable="false" />
-    <NavigationProperty Name="Viajes" Relationship="Self.FK__Viaje__idUser__2E1BDC42" FromRole="Usuario" ToRole="Viaje" />
+    <NavigationProperty Name="Viajes" Relationship="Self.FK__Viaje__idUser__4D94879B" FromRole="Usuario" ToRole="Viaje" />
   </EntityType>
   <EntityType Name="Viaje">
     <Key>
@@ -54,14 +55,16 @@
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="idUser" Type="Int32" />
-    <Property Name="fechaInicio" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="fechaFin" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="idBici" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="fechaInicio" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="fechaFin" Type="DateTime" Nullable="false" Precision="7" />
     <Property Name="idAnclajeIni" Type="Int32" />
     <Property Name="idAnclajeFin" Type="Int32" />
     <Property Name="precio" Type="Double" Nullable="false" />
-    <NavigationProperty Name="Anclaje" Relationship="Self.FK__Viaje__idAnclaje__2F10007B" FromRole="Viaje" ToRole="Anclaje" />
-    <NavigationProperty Name="Anclaje1" Relationship="Self.FK__Viaje__idAnclaje__300424B4" FromRole="Viaje" ToRole="Anclaje" />
-    <NavigationProperty Name="Usuario" Relationship="Self.FK__Viaje__idUser__2E1BDC42" FromRole="Viaje" ToRole="Usuario" />
+    <NavigationProperty Name="Anclaje" Relationship="Self.FK__Viaje__idAnclaje__4F7CD00D" FromRole="Viaje" ToRole="Anclaje" />
+    <NavigationProperty Name="Anclaje1" Relationship="Self.FK__Viaje__idAnclaje__5070F446" FromRole="Viaje" ToRole="Anclaje" />
+    <NavigationProperty Name="Bicicleta" Relationship="Self.FK__Viaje__idBici__4E88ABD4" FromRole="Viaje" ToRole="Bicicleta" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK__Viaje__idUser__4D94879B" FromRole="Viaje" ToRole="Usuario" />
   </EntityType>
   <Association Name="FK__Anclaje__idBici__2B3F6F97">
     <End Role="Bicicleta" Type="Self.Bicicleta" Multiplicity="0..1" />
@@ -87,7 +90,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Viaje__idAnclaje__2F10007B">
+  <Association Name="FK__Viaje__idAnclaje__4F7CD00D">
     <End Role="Anclaje" Type="Self.Anclaje" Multiplicity="0..1" />
     <End Role="Viaje" Type="Self.Viaje" Multiplicity="*" />
     <ReferentialConstraint>
@@ -99,7 +102,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Viaje__idAnclaje__300424B4">
+  <Association Name="FK__Viaje__idAnclaje__5070F446">
     <End Role="Anclaje" Type="Self.Anclaje" Multiplicity="0..1" />
     <End Role="Viaje" Type="Self.Viaje" Multiplicity="*" />
     <ReferentialConstraint>
@@ -111,7 +114,19 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Viaje__idUser__2E1BDC42">
+  <Association Name="FK__Viaje__idBici__4E88ABD4">
+    <End Role="Bicicleta" Type="Self.Bicicleta" Multiplicity="0..1" />
+    <End Role="Viaje" Type="Self.Viaje" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bicicleta">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Viaje">
+        <PropertyRef Name="idBici" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Viaje__idUser__4D94879B">
     <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
     <End Role="Viaje" Type="Self.Viaje" Multiplicity="*" />
     <ReferentialConstraint>
@@ -123,7 +138,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="RutaBikesDbEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="RutaBikesDbEntitiesN" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Anclajes" EntityType="Self.Anclaje" />
     <EntitySet Name="Bicicletas" EntityType="Self.Bicicleta" />
     <EntitySet Name="Estacions" EntityType="Self.Estacion" />
@@ -138,15 +153,19 @@
       <End Role="Estacion" EntitySet="Estacions" />
       <End Role="Anclaje" EntitySet="Anclajes" />
     </AssociationSet>
-    <AssociationSet Name="FK__Viaje__idAnclaje__2F10007B" Association="Self.FK__Viaje__idAnclaje__2F10007B">
+    <AssociationSet Name="FK__Viaje__idAnclaje__4F7CD00D" Association="Self.FK__Viaje__idAnclaje__4F7CD00D">
       <End Role="Anclaje" EntitySet="Anclajes" />
       <End Role="Viaje" EntitySet="Viajes" />
     </AssociationSet>
-    <AssociationSet Name="FK__Viaje__idAnclaje__300424B4" Association="Self.FK__Viaje__idAnclaje__300424B4">
+    <AssociationSet Name="FK__Viaje__idAnclaje__5070F446" Association="Self.FK__Viaje__idAnclaje__5070F446">
       <End Role="Anclaje" EntitySet="Anclajes" />
       <End Role="Viaje" EntitySet="Viajes" />
     </AssociationSet>
-    <AssociationSet Name="FK__Viaje__idUser__2E1BDC42" Association="Self.FK__Viaje__idUser__2E1BDC42">
+    <AssociationSet Name="FK__Viaje__idBici__4E88ABD4" Association="Self.FK__Viaje__idBici__4E88ABD4">
+      <End Role="Bicicleta" EntitySet="Bicicletas" />
+      <End Role="Viaje" EntitySet="Viajes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Viaje__idUser__4D94879B" Association="Self.FK__Viaje__idUser__4D94879B">
       <End Role="Usuario" EntitySet="Usuarios" />
       <End Role="Viaje" EntitySet="Viajes" />
     </AssociationSet>

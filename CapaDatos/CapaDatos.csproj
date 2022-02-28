@@ -75,12 +75,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="ModeloBikes.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModeloBikes.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.Config" />
     <None Include="DSBikes.xsc">
       <DependentUpon>DSBikes.xsd</DependentUpon>
@@ -93,6 +87,10 @@
     <None Include="DSBikes.xss">
       <DependentUpon>DSBikes.xsd</DependentUpon>
     </None>
+    <EntityDeploy Include="ModeloBikes.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModeloBikes.Designer.cs</LastGenOutput>
+    </EntityDeploy>
     <None Include="ModeloBikes.edmx.diagram">
       <DependentUpon>ModeloBikes.edmx</DependentUpon>
     </None>
@@ -103,13 +101,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ModeloBikes.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ModeloBikes.Context.cs</LastGenOutput>
-      <DependentUpon>ModeloBikes.edmx</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
@@ -117,6 +108,13 @@
       <Project>{4867AFD7-1BD7-48AB-AC02-F520F4003186}</Project>
       <Name>Entidades</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ModeloBikes.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModeloBikes.edmx</DependentUpon>
+      <LastGenOutput>ModeloBikes.Context.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

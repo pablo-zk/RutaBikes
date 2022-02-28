@@ -14,10 +14,10 @@ namespace CapaDatos
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class RutaBikesDbEntities : DbContext
+    public partial class RutaBikesDbEntitiesN : DbContext
     {
-        public RutaBikesDbEntities()
-            : base("name=RutaBikesDbEntities")
+        public RutaBikesDbEntitiesN()
+            : base("name=RutaBikesDbEntitiesN")
         {
         }
     

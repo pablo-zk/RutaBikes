@@ -4,22 +4,19 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="742d8180891547f7b8e212b4716db538" Name="Diagram1">
-        <EntityTypeShape EntityType="RutaBikesDbModel.Anclaje" Width="1.5" PointX="6.375" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="RutaBikesDbModel.Bicicleta" Width="1.5" PointX="7.375" PointY="3.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="RutaBikesDbModel.Estacion" Width="1.5" PointX="3.5" PointY="4.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="RutaBikesDbModel.Tarifa" Width="1.5" PointX="1" PointY="3.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="RutaBikesDbModel.Usuario" Width="1.5" PointX="0.875" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="RutaBikesDbModel.Viaje" Width="1.5" PointX="3.5" PointY="0.5" IsExpanded="true" />
+      <Diagram DiagramId="4b74538aab8342c683b5e940978cec53" Name="Diagram1">
+        <EntityTypeShape EntityType="RutaBikesDbModel.Anclaje" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RutaBikesDbModel.Bicicleta" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RutaBikesDbModel.Estacion" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RutaBikesDbModel.Tarifa" Width="1.5" PointX="5.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RutaBikesDbModel.Usuario" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RutaBikesDbModel.Viaje" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
         <AssociationConnector Association="RutaBikesDbModel.FK__Anclaje__idBici__2B3F6F97" ManuallyRouted="false" />
-        <AssociationConnector Association="RutaBikesDbModel.FK__Anclaje__idEstac__2A4B4B5E" ManuallyRouted="true" >
-          <ConnectorPoint PointX="5" PointY="5.5307828776041665" />
-          <ConnectorPoint PointX="6.84375" PointY="5.5307828776041665" />
-          <ConnectorPoint PointX="6.84375" PointY="3.1148893229166665" />
-        </AssociationConnector>
-        <AssociationConnector Association="RutaBikesDbModel.FK__Viaje__idAnclaje__2F10007B" ManuallyRouted="false" />
-        <AssociationConnector Association="RutaBikesDbModel.FK__Viaje__idAnclaje__300424B4" ManuallyRouted="false" />
-        <AssociationConnector Association="RutaBikesDbModel.FK__Viaje__idUser__2E1BDC42" ManuallyRouted="false" />
+        <AssociationConnector Association="RutaBikesDbModel.FK__Anclaje__idEstac__2A4B4B5E" ManuallyRouted="false" />
+        <AssociationConnector Association="RutaBikesDbModel.FK__Viaje__idAnclaje__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="RutaBikesDbModel.FK__Viaje__idAnclaje__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="RutaBikesDbModel.FK__Viaje__idBici__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="RutaBikesDbModel.FK__Viaje__idUser__4D94879B" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

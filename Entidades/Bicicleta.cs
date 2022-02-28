@@ -18,11 +18,14 @@ namespace Entidades
         public Bicicleta()
         {
             this.Anclajes = new HashSet<Anclaje>();
+            this.Viajes = new HashSet<Viaje>();
         }
     
         public string id { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Anclaje> Anclajes { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Viaje> Viajes { get; set; }
     }
 }

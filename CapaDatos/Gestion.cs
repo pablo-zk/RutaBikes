@@ -9,7 +9,7 @@ namespace CapaDatos
 {
     public class Gestion
     {
-        private RutaBikesDbEntities bikeEntities = new RutaBikesDbEntities();
+        private RutaBikesDbEntitiesN bikeEntities = new RutaBikesDbEntitiesN();
 
         public Usuario Login(string email, string contrasena)
         {
@@ -57,7 +57,7 @@ namespace CapaDatos
             return bikeEntities.Usuarios.Find(idUser).Viajes.Any(viaje => viaje.idAnclajeFin == null);
         }
 
-        public string IniciarViaje(int idUser, int idAnclajeIni, DateTime fechaIni)
+        public string IniciarViaje(int idUser, int idAnclajeIni, DateTime fechaIni, string idBici)
         {
             var user = bikeEntities.Usuarios.Find(idUser);
             if (user == null) return "Usuario no existe";
@@ -72,7 +72,7 @@ namespace CapaDatos
 
             try
             {
-                Viaje newViaje = new Viaje(idUser, fechaIni, anclaje, user);
+                Viaje newViaje = new Viaje(idUser, idBici, fechaIni, anclaje, user);
 
                 //Quitar bicicleta de ese anclaje para ponerla en otro al finalizar el viaje
                 //newViaje.idBici = anclaje.idBici;

@@ -29,8 +29,8 @@ CREATE TABLE Anclaje(
 CREATE TABLE Viaje(
 	id int primary key not null IDENTITY(1,1),
 	idUser int foreign key references Usuario(id),
-	fechaInicio datetime not null,
-	fechaFin datetime not null,
+	fechaInicio datetime2 not null,
+	fechaFin datetime2 not null,
 	idAnclajeIni int foreign key references Anclaje(id),
 	idAnclajeFin int foreign key references Anclaje(id),
 	precio float not null,

@@ -41,5 +41,15 @@ namespace CapaDatos
                 error = e.Message;
             }
         }
+
+        public List<EstacionDTO> ObtenerEstaciones()
+        {
+            return dsBikes.Estacion.Select(l => new EstacionDTO(l.id, l.ubicacion, l.GetAnclajeRows().Select(a => new Anclaje(a.idEstacion, a.id, a.idBici)).ToList())).ToList();
+        }
+
+        public List<Anclaje> ObtenerAnclajesDeEstacion(int idEstacion)
+        {
+            return dsBikes.Anclaje.Select(a => new Anclaje(a.idEstacion, a.id, a.idBici)).ToList();
+        }
     }
 }

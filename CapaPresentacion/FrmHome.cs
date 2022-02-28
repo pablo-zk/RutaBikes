@@ -22,13 +22,13 @@ namespace CapaPresentacion
         private void FrmHome_Load(object sender, EventArgs e)
         {
             this.Text = $"Bienvenido {Program.userActive.email}!!";
-            List<Estacion> estaciones = Program.gestor.ObtenerEstaciones();
+            List<EstacionDTO> estaciones = Program.gestorDS.ObtenerEstaciones();
             dgvEstaciones.DataSource = estaciones.Select(est => new
             {
                 NumEstacion = est.id,
                 Ubicacion = est.ubicacion,
-                AnclajesLibres = est.Anclajes.Count(a => a.idBici == null),
-                BicisDisponibles = est.Anclajes.Count(a => a.idBici != null),
+                AnclajesLibres = est.anclajes.Count(a => a.idBici == null),
+                BicisDisponibles = est.anclajes.Count(a => a.idBici != null),
             }).ToArray();
             btnIniciarViaje.Enabled = false;
         }
@@ -47,7 +47,7 @@ namespace CapaPresentacion
             }
             btnIniciarViaje.Enabled = true;
             string idEstacion = row.Cells["NumEstacion"].Value.ToString();
-            List<Anclaje> anclajes = Program.gestor.ObtenerAnclajesDeEstacion(int.Parse(idEstacion));
+            List<Anclaje> anclajes = Program.gestorDS.ObtenerAnclajesDeEstacion(int.Parse(idEstacion));
             dgvAnclaje.DataSource = anclajes.Select(a => new { 
                 IdentificadorAnclaje = a.id,
                 Bicicletas = a.idBici == null ? "Libre" : a.idBici,

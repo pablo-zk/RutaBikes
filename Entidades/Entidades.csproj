@@ -54,7 +54,7 @@
     <Compile Include="Bicicleta.cs">
       <DependentUpon>ModeloBikes.tt</DependentUpon>
     </Compile>
-    <Compile Include="Class1.cs" />
+    <Compile Include="EstacionDTO.cs" />
     <Compile Include="Estacion.cs">
       <DependentUpon>ModeloBikes.tt</DependentUpon>
     </Compile>

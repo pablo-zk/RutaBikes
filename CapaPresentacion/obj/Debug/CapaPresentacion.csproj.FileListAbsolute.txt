@@ -44,3 +44,4 @@ C:\Users\Usuario\source\repos\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentac
 C:\Users\Usuario\source\repos\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CopyComplete
 C:\Users\Usuario\source\repos\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacion.exe
 C:\Users\Usuario\source\repos\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
+C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacion.FrmDetailTrips.resources

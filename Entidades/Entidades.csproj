@@ -78,6 +78,7 @@
     <Compile Include="Viaje.cs">
       <DependentUpon>ModeloBikes.tt</DependentUpon>
     </Compile>
+    <Compile Include="ViajeDTO.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />

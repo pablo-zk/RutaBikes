@@ -42,14 +42,29 @@ namespace CapaDatos
             }
         }
 
-        public List<EstacionDTO> ObtenerEstaciones()
-        {
-            return dsBikes.Estacion.Select(l => new EstacionDTO(l.id, l.ubicacion, l.GetAnclajeRows().Select(a => new Anclaje(a.idEstacion, a.id, a.idBici)).ToList())).ToList();
-        }
+        //public List<EstacionDTO> ObtenerEstaciones()
+        //{
+        //    return dsBikes.Estacion.Select(l => new EstacionDTO(l.id, l.ubicacion, l.GetAnclajeRows().Select(a => new Anclaje(a.idEstacion, a.id, a.IsidBiciNull()?null:a.idBici)).ToList())).ToList();
+        //}
 
-        public List<Anclaje> ObtenerAnclajesDeEstacion(int idEstacion)
+        //public List<Anclaje> ObtenerAnclajesDeEstacion(int idEstacion)
+        //{
+        //    return dsBikes.Anclaje.Where(a => a.idEstacion.Equals(idEstacion)).Select(a => new Anclaje(a.idEstacion, a.id, a.IsidBiciNull() ? null : a.idBici)).ToList();
+        //}
+
+        public List<ViajeDTO> HistorialViajesUser(int idUser)
         {
-            return dsBikes.Anclaje.Select(a => new Anclaje(a.idEstacion, a.id, a.idBici)).ToList();
+            return dsBikes.Viaje.Where(vi => vi.idUser.Equals(idUser)).Select(vi => new ViajeDTO(
+                vi.id, 
+                vi.idUser, 
+                vi.fechaInicio, 
+                vi.fechaFin, 
+                vi.IsidAnclajeIniNull() ? -1 : vi.idAnclajeIni,
+                vi.IsidAnclajeFinNull() ? -1 : vi.idAnclajeFin,
+                vi.precio,
+                vi.IsidAnclajeIniNull() ? null : dsBikes.Anclaje.FindByid(vi.idAnclajeIni).EstacionRow.ubicacion,
+                vi.IsidAnclajeFinNull() ? null : dsBikes.Anclaje.FindByid(vi.idAnclajeFin).EstacionRow.ubicacion
+                )).ToList();
         }
     }
 }

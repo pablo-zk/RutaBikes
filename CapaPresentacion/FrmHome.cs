@@ -22,14 +22,17 @@ namespace CapaPresentacion
         private void FrmHome_Load(object sender, EventArgs e)
         {
             this.Text = $"Bienvenido {Program.userActive.email}!!";
-            List<EstacionDTO> estaciones = Program.gestorDS.ObtenerEstaciones();
+            List<Estacion> estaciones = Program.gestor.ObtenerEstaciones();
             dgvEstaciones.DataSource = estaciones.Select(est => new
             {
                 NumEstacion = est.id,
                 Ubicacion = est.ubicacion,
-                AnclajesLibres = est.anclajes.Count(a => a.idBici == null),
-                BicisDisponibles = est.anclajes.Count(a => a.idBici != null),
+                AnclajesLibres = est.Anclajes.Count(a => a.idBici == null),
+                BicisDisponibles = est.Anclajes.Count(a => a.idBici != null),
             }).ToArray();
+            if (Program.gestor.UserHasActiveTrip(Program.userActive.id)){
+                btnIniciarViaje.Text = "CERRAR VIAJE";
+            }
             btnIniciarViaje.Enabled = false;
         }
 
@@ -47,7 +50,7 @@ namespace CapaPresentacion
             }
             btnIniciarViaje.Enabled = true;
             string idEstacion = row.Cells["NumEstacion"].Value.ToString();
-            List<Anclaje> anclajes = Program.gestorDS.ObtenerAnclajesDeEstacion(int.Parse(idEstacion));
+            List<Anclaje> anclajes = Program.gestor.ObtenerAnclajesDeEstacion(int.Parse(idEstacion));
             dgvAnclaje.DataSource = anclajes.Select(a => new { 
                 IdentificadorAnclaje = a.id,
                 Bicicletas = a.idBici == null ? "Libre" : a.idBici,
@@ -61,11 +64,28 @@ namespace CapaPresentacion
                 MessageBox.Show("Debes seleccionar una estación y después una bicicleta");
                 return;
             }
-            string idAnclajeIni = dgvAnclaje.CurrentRow.Cells["IdentificadorAnclaje"].Value.ToString();
-            if (idAnclajeIni != null)
+            string idAnclaje = dgvAnclaje.CurrentRow.Cells["IdentificadorAnclaje"].Value.ToString();
+            if (idAnclaje != null)
             {
-                string result = Program.gestor.IniciarViaje(Program.userActive.id, int.Parse(idAnclajeIni), new DateTime());
-                MessageBox.Show(result);
+                if (btnIniciarViaje.Text.Contains("CERRAR"))
+                {
+                    string result = Program.gestor.FinalizarViaje(Program.userActive.id, int.Parse(idAnclaje), DateTime.Now);
+                    MessageBox.Show(result);
+                }
+                else
+                {
+                    string result = Program.gestor.IniciarViaje(Program.userActive.id, int.Parse(idAnclaje), DateTime.Now);
+                    MessageBox.Show(result);
+                }
+            }
+            //NO ME CONVENCE NADA
+            if (Program.gestor.UserHasActiveTrip(Program.userActive.id))
+            {
+                btnIniciarViaje.Text = "CERRAR VIAJE";
+            }
+            else
+            {
+                btnIniciarViaje.Text = "ABRIR VIAJE";
             }
         }
 
@@ -76,6 +96,12 @@ namespace CapaPresentacion
             FrmLogin frm = new FrmLogin();
             frm.Show();
             Close();
+        }
+
+        private void misViajesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmDetailTrips frm = new FrmDetailTrips();
+            frm.Show();
         }
     }
 }

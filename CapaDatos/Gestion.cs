@@ -52,6 +52,11 @@ namespace CapaDatos
             return bikeEntities.Anclajes.Where(a => a.idEstacion == idEstacion).ToList();
         }
 
+        public Boolean UserHasActiveTrip(int idUser)
+        {
+            return bikeEntities.Usuarios.Find(idUser).Viajes.Any(viaje => viaje.idAnclajeFin == null);
+        }
+
         public string IniciarViaje(int idUser, int idAnclajeIni, DateTime fechaIni)
         {
             var user = bikeEntities.Usuarios.Find(idUser);
@@ -70,6 +75,7 @@ namespace CapaDatos
                 Viaje newViaje = new Viaje(idUser, fechaIni, anclaje, user);
 
                 //Quitar bicicleta de ese anclaje para ponerla en otro al finalizar el viaje
+                //newViaje.idBici = anclaje.idBici;
                 anclaje.Bicicleta = null;
                 anclaje.idBici = null;
                 //var nFilas = bikeEntities.SaveChanges();
@@ -79,6 +85,46 @@ namespace CapaDatos
                 var filas = bikeEntities.SaveChanges();
                 if (filas == 0) return "Error al iniciar el viaje";
             }catch(Exception e)
+            {
+                return e.Message;
+            }
+            return "Viaje creado con éxito.";
+        }
+
+        public string FinalizarViaje(int idUser, int idAnclajeFin, DateTime fechaFin)
+        {
+            var user = bikeEntities.Usuarios.Find(idUser);
+            if (user == null) return "Usuario no existe";
+
+            var userTrip = user.Viajes.FirstOrDefault(viaje => viaje.idAnclajeFin == null);
+            if (userTrip == null) return $"El usuario con email {user.email} no tiene viajes en curso.";
+
+            var anclaje = bikeEntities.Anclajes.Find(idAnclajeFin);
+            if (anclaje == null || anclaje.Bicicleta != null) return "Anclaje no existe o no está libre";
+
+            TimeSpan result = fechaFin.Subtract(userTrip.fechaInicio);
+            Tarifa tarifa = bikeEntities.Tarifas.FirstOrDefault(tarif => result.TotalMinutes <= tarif.maxTiempo && result.TotalMinutes > tarif.minTiempo);
+            if (tarifa == null) return "No se ha podido aplicar una tarifa.";
+
+            double precioFinal = tarifa.precioBase * result.TotalMinutes + userTrip.precio;
+
+            if (user.monedero < precioFinal) return $"El usuario no tiene suficiente dinero en la cuenta para pagar el viaje. Saldo: {user.monedero}, necesarios: {precioFinal - user.monedero} €";
+
+            try
+            {
+                userTrip.fechaFin = fechaFin;
+                userTrip.idAnclajeFin = idAnclajeFin;
+                userTrip.Anclaje1 = anclaje;
+                userTrip.precio = precioFinal;
+
+                //Añadir la bicicleta al anclaje nuevo
+                //anclaje.Bicicleta = bikeEntities.Bicicletas.Find(userTrip.idBici);
+                //anclaje.idBici = userTrip.idBici;
+
+                var filas = bikeEntities.SaveChanges();
+                if (filas == 0) return "Error al finalizar el viaje";
+            }
+            catch (Exception e)
             {
                 return e.Message;
             }

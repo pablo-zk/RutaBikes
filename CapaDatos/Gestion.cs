@@ -57,7 +57,7 @@ namespace CapaDatos
             return bikeEntities.Usuarios.Find(idUser).Viajes.Any(viaje => viaje.idAnclajeFin == null);
         }
 
-        public string IniciarViaje(int idUser, int idAnclajeIni, DateTime fechaIni, string idBici)
+        public string IniciarViaje(int idUser, int idAnclajeIni, DateTime fechaIni)
         {
             var user = bikeEntities.Usuarios.Find(idUser);
             if (user == null) return "Usuario no existe";
@@ -72,14 +72,11 @@ namespace CapaDatos
 
             try
             {
-                Viaje newViaje = new Viaje(idUser, idBici, fechaIni, anclaje, user);
+                Viaje newViaje = new Viaje(idUser, anclaje.idBici, fechaIni, anclaje, user);
 
                 //Quitar bicicleta de ese anclaje para ponerla en otro al finalizar el viaje
-                //newViaje.idBici = anclaje.idBici;
                 anclaje.Bicicleta = null;
                 anclaje.idBici = null;
-                //var nFilas = bikeEntities.SaveChanges();
-                //if (nFilas == 0) return "Error al iniciar el viaje";
 
                 bikeEntities.Viajes.Add(newViaje);
                 var filas = bikeEntities.SaveChanges();
@@ -109,41 +106,45 @@ namespace CapaDatos
             double precioFinal = tarifa.precioBase * result.TotalMinutes + userTrip.precio;
 
             if (user.monedero < precioFinal) return $"El usuario no tiene suficiente dinero en la cuenta para pagar el viaje. Saldo: {user.monedero}, necesarios: {precioFinal - user.monedero} €";
+           
+            Bicicleta bici = bikeEntities.Bicicletas.Find(userTrip.idBici);
+            if (bici == null) return "Bicicleta no registrada";
 
             try
             {
                 userTrip.fechaFin = fechaFin;
-                userTrip.idAnclajeFin = idAnclajeFin;
-                userTrip.Anclaje1 = anclaje;
                 userTrip.precio = precioFinal;
+                userTrip.idAnclajeFin = idAnclajeFin;
 
                 //Añadir la bicicleta al anclaje nuevo
-                //anclaje.Bicicleta = bikeEntities.Bicicletas.Find(userTrip.idBici);
-                //anclaje.idBici = userTrip.idBici;
+                anclaje.Bicicleta = bici;
+                anclaje.idBici = userTrip.idBici;
+                userTrip.Anclaje1 = anclaje;
 
-                
+                var filas = bikeEntities.SaveChanges();
+                if (filas == 0) return "Error al finalizar el viaje";
             }
             catch (Exception e)
             {
                 return e.Message;
             }
-            return "Viaje creado con éxito.";
+            return "Viaje finalizado con éxito.";
         }
 
         public Usuario ModificarUsuario(int idUser, string email, int telefono, string numCuenta, out string error)
         {
-            error = "";
-            Usuario userActual = bikeEntities.Usuarios.Find(idUser);
-            return ModificarUsuario(userActual.id,email, telefono, numCuenta,out error);
+            Usuario userFinal = ModificarUsuario(idUser,email, telefono, numCuenta, "", out string error2);
+            error = error2;
+            return userFinal;
         }
-        public Usuario ModificarUsuario(int idUser, string email, int telefono, string numCuenta, string contrasena, string repContrasena, out string error)
+        public Usuario ModificarUsuario(int idUser, string email, int telefono, string numCuenta, string contrasena, out string error2)
         {
-            error = "";
+            error2 = "";
             Usuario userActual = bikeEntities.Usuarios.Find(idUser);
-            var userEmail = bikeEntities.Usuarios.Any(usr => usr.email.Equals(email) && !usr.id.Equals(idUser));
+            var userEmail = bikeEntities.Usuarios.Any(usr => usr.email.ToLower().Equals(email.ToLower()) && !usr.id.Equals(idUser));
             if (userEmail)
             {
-                error = "Ya existe un usuario con ese email. Introduce uno diferente";
+                error2 = "Ya existe un usuario con ese email. Introduce uno diferente";
                 return null;
             }
             try
@@ -151,16 +152,17 @@ namespace CapaDatos
                 userActual.email = email;
                 userActual.telefono = telefono;
                 userActual.numCuenta = numCuenta;
+                if(!contrasena.Equals("")) userActual.contrasena = contrasena;
                 var filas = bikeEntities.SaveChanges();
                 if (filas == 0)
                 {
-                    error = "Error al modificar el usuario";
+                    error2 = "Error al modificar el usuario";
                     return null;
                 }
             }
             catch (Exception e)
             {
-                error = e.Message;
+                error2 = e.Message;
                 return null;
             }
             return userActual;

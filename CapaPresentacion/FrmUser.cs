@@ -40,6 +40,8 @@ namespace CapaPresentacion
                 MessageBox.Show("Número de cuenta inválido");
                 return;
             }
+            Usuario userFinal;
+            string error;
             if (chkCambiarPass.Checked)
             {
                 if(txtContrasena.Text.Equals("") || txtRepContrasena.Text.Equals("") || !txtContrasena.Text.Equals(txtRepContrasena.Text))
@@ -47,21 +49,26 @@ namespace CapaPresentacion
                     MessageBox.Show("Contraseñas no coinciden.");
                     return;
                 }
-                Usuario user = Program.gestor.ModificarUsuario(Program.userActive.id, txtEmail.Text, telefonoInt, txtNumCuenta.Text, txtContrasena.Text, txtRepContrasena.Text, out string error);
-                if(user == null)
-                {
-                    MessageBox.Show(error);
-                    return;
-                }
-                Program.userActive = user;
-                
+                userFinal = Program.gestor.ModificarUsuario(Program.userActive.id, txtEmail.Text, telefonoInt, txtNumCuenta.Text, txtContrasena.Text, out error);
             }
-            Usuario user2 = Program.gestor.ModificarUsuario(Program.userActive.id, txtEmail.Text, telefonoInt, txtRepContrasena.Text, out string error2);
+            else
+            {
+                userFinal = Program.gestor.ModificarUsuario(Program.userActive.id, txtEmail.Text, telefonoInt, txtNumCuenta.Text, out error);
+            }
+            if (userFinal == null)
+            {
+                MessageBox.Show(error);
+                return;
+            }
+            Program.userActive = userFinal;
+            MessageBox.Show("Usuario modificado correctamente.");
+            Close();
         }
 
         private void FrmUser_Load(object sender, EventArgs e)
         {
             chkCambiarPass.Checked = false;
+            grpCambiarPass.Enabled = false;
             txtEmail.Text = Program.userActive.email;
             txtTelefono.Text = Program.userActive.telefono.ToString();
             txtNumCuenta.Text = Program.userActive.numCuenta;

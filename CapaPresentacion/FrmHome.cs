@@ -75,7 +75,7 @@ namespace CapaPresentacion
                 }
                 else
                 {
-                    string result = Program.gestor.IniciarViaje(Program.userActive.id, int.Parse(idAnclaje), DateTime.Now, idBici);
+                    string result = Program.gestor.IniciarViaje(Program.userActive.id, int.Parse(idAnclaje), DateTime.Now);
                     MessageBox.Show(result);
                 }
             }
@@ -102,6 +102,12 @@ namespace CapaPresentacion
         private void misViajesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmDetailTrips frm = new FrmDetailTrips();
+            frm.Show();
+        }
+
+        private void modificarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmUser frm = new FrmUser();
             frm.Show();
         }
     }

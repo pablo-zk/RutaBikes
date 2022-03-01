@@ -38,6 +38,7 @@ namespace CapaPresentacion
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.opcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.misViajesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstaciones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAnclaje)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -113,7 +114,8 @@ namespace CapaPresentacion
             // opcionesToolStripMenuItem
             // 
             this.opcionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.misViajesToolStripMenuItem});
+            this.misViajesToolStripMenuItem,
+            this.modificarUsuarioToolStripMenuItem});
             this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
             this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
             this.opcionesToolStripMenuItem.Text = "Opciones";
@@ -124,6 +126,13 @@ namespace CapaPresentacion
             this.misViajesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.misViajesToolStripMenuItem.Text = "Mis viajes";
             this.misViajesToolStripMenuItem.Click += new System.EventHandler(this.misViajesToolStripMenuItem_Click);
+            // 
+            // modificarUsuarioToolStripMenuItem
+            // 
+            this.modificarUsuarioToolStripMenuItem.Name = "modificarUsuarioToolStripMenuItem";
+            this.modificarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modificarUsuarioToolStripMenuItem.Text = "Modificar usuario";
+            this.modificarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.modificarUsuarioToolStripMenuItem_Click);
             // 
             // FrmHome
             // 
@@ -161,5 +170,6 @@ namespace CapaPresentacion
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem opcionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem misViajesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modificarUsuarioToolStripMenuItem;
     }
 }

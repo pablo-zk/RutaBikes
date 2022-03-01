@@ -121,49 +121,14 @@ namespace CapaDatos
                 //anclaje.Bicicleta = bikeEntities.Bicicletas.Find(userTrip.idBici);
                 //anclaje.idBici = userTrip.idBici;
 
-                
+                var filas = bikeEntities.SaveChanges();
+                if (filas == 0) return "Error al finalizar el viaje";
             }
             catch (Exception e)
             {
                 return e.Message;
             }
             return "Viaje creado con éxito.";
-        }
-
-        public Usuario ModificarUsuario(int idUser, string email, int telefono, string numCuenta, out string error)
-        {
-            error = "";
-            Usuario userActual = bikeEntities.Usuarios.Find(idUser);
-            return ModificarUsuario(userActual.id,email, telefono, numCuenta,out error);
-        }
-        public Usuario ModificarUsuario(int idUser, string email, int telefono, string numCuenta, string contrasena, string repContrasena, out string error)
-        {
-            error = "";
-            Usuario userActual = bikeEntities.Usuarios.Find(idUser);
-            var userEmail = bikeEntities.Usuarios.Any(usr => usr.email.Equals(email) && !usr.id.Equals(idUser));
-            if (userEmail)
-            {
-                error = "Ya existe un usuario con ese email. Introduce uno diferente";
-                return null;
-            }
-            try
-            {
-                userActual.email = email;
-                userActual.telefono = telefono;
-                userActual.numCuenta = numCuenta;
-                var filas = bikeEntities.SaveChanges();
-                if (filas == 0)
-                {
-                    error = "Error al modificar el usuario";
-                    return null;
-                }
-            }
-            catch (Exception e)
-            {
-                error = e.Message;
-                return null;
-            }
-            return userActual;
         }
     }
 }

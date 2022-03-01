@@ -39,12 +39,10 @@ namespace CapaPresentacion
             this.label4 = new System.Windows.Forms.Label();
             this.txtRepContrasena = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.grpCambiarPass = new System.Windows.Forms.GroupBox();
-            this.chkCambiarPass = new System.Windows.Forms.CheckBox();
-            this.grpCambiarPass.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -97,7 +95,7 @@ namespace CapaPresentacion
             // 
             // txtContrasena
             // 
-            this.txtContrasena.Location = new System.Drawing.Point(17, 39);
+            this.txtContrasena.Location = new System.Drawing.Point(71, 304);
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.Size = new System.Drawing.Size(187, 20);
             this.txtContrasena.TabIndex = 7;
@@ -105,7 +103,7 @@ namespace CapaPresentacion
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(14, 23);
+            this.label4.Location = new System.Drawing.Point(68, 288);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(94, 13);
             this.label4.TabIndex = 6;
@@ -113,7 +111,7 @@ namespace CapaPresentacion
             // 
             // txtRepContrasena
             // 
-            this.txtRepContrasena.Location = new System.Drawing.Point(17, 94);
+            this.txtRepContrasena.Location = new System.Drawing.Point(71, 359);
             this.txtRepContrasena.Name = "txtRepContrasena";
             this.txtRepContrasena.Size = new System.Drawing.Size(187, 20);
             this.txtRepContrasena.TabIndex = 9;
@@ -121,11 +119,22 @@ namespace CapaPresentacion
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(14, 78);
+            this.label5.Location = new System.Drawing.Point(68, 343);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(97, 13);
             this.label5.TabIndex = 8;
             this.label5.Text = "Repetir contraseña";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label6.Location = new System.Drawing.Point(68, 255);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(118, 15);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Cambiar contraseña";
             // 
             // label7
             // 
@@ -139,57 +148,35 @@ namespace CapaPresentacion
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(184, 429);
+            this.btnModificar.Location = new System.Drawing.Point(183, 404);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
             this.btnModificar.TabIndex = 12;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(72, 429);
+            this.btnCancelar.Location = new System.Drawing.Point(71, 404);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 13;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // grpCambiarPass
-            // 
-            this.grpCambiarPass.Controls.Add(this.txtRepContrasena);
-            this.grpCambiarPass.Controls.Add(this.label4);
-            this.grpCambiarPass.Controls.Add(this.txtContrasena);
-            this.grpCambiarPass.Controls.Add(this.label5);
-            this.grpCambiarPass.Location = new System.Drawing.Point(54, 276);
-            this.grpCambiarPass.Name = "grpCambiarPass";
-            this.grpCambiarPass.Size = new System.Drawing.Size(218, 132);
-            this.grpCambiarPass.TabIndex = 14;
-            this.grpCambiarPass.TabStop = false;
-            // 
-            // chkCambiarPass
-            // 
-            this.chkCambiarPass.AutoSize = true;
-            this.chkCambiarPass.Location = new System.Drawing.Point(54, 253);
-            this.chkCambiarPass.Name = "chkCambiarPass";
-            this.chkCambiarPass.Size = new System.Drawing.Size(120, 17);
-            this.chkCambiarPass.TabIndex = 0;
-            this.chkCambiarPass.Text = "Cambiar contraseña";
-            this.chkCambiarPass.UseVisualStyleBackColor = true;
-            this.chkCambiarPass.CheckedChanged += new System.EventHandler(this.chkCambiarPass_CheckedChanged);
             // 
             // FrmUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(342, 482);
-            this.Controls.Add(this.chkCambiarPass);
-            this.Controls.Add(this.grpCambiarPass);
+            this.ClientSize = new System.Drawing.Size(342, 450);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtRepContrasena);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtContrasena);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.txtNumCuenta);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtTelefono);
@@ -198,9 +185,6 @@ namespace CapaPresentacion
             this.Controls.Add(this.label1);
             this.Name = "FrmUser";
             this.Text = "FrmUser";
-            this.Load += new System.EventHandler(this.FrmUser_Load);
-            this.grpCambiarPass.ResumeLayout(false);
-            this.grpCambiarPass.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -218,10 +202,9 @@ namespace CapaPresentacion
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtRepContrasena;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.GroupBox grpCambiarPass;
-        private System.Windows.Forms.CheckBox chkCambiarPass;
     }
 }

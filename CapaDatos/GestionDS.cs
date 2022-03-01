@@ -54,6 +54,9 @@ namespace CapaDatos
 
         public List<ViajeDTO> HistorialViajesUser(int idUser)
         {
+            daViaje.Fill(dsBikes.Viaje);
+            daEstacion.Fill(dsBikes.Estacion);
+            daAnclaje.Fill(dsBikes.Anclaje);
             return dsBikes.Viaje.Where(vi => vi.idUser.Equals(idUser)).Select(vi => new ViajeDTO(
                 vi.id, 
                 vi.idUser,

@@ -43,7 +43,8 @@ namespace CapaPresentacion
 
         private void btnRecargar_Click(object sender, EventArgs e)
         {
-
+            FrmBanco frm = new FrmBanco();
+            frm.ShowDialog();
         }
 
         private void btnUsuario_Click(object sender, EventArgs e)

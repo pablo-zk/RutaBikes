@@ -20,7 +20,6 @@ C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\CapaPre
 C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\CapaPresentacion\bin\Debug\Entidades.pdb
 C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\CapaPresentacion\bin\Debug\Entidades.dll.config
 C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacion.FrmHome.resources
-C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacion.FrmViaje.resources
 C:\Users\Usuario\source\repos\RutaBikes\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
 C:\Users\Usuario\source\repos\RutaBikes\CapaPresentacion\bin\Debug\CapaPresentacion.exe
 C:\Users\Usuario\source\repos\RutaBikes\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
@@ -76,3 +75,7 @@ C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacio
 C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacion.FrmShowTrip.resources
 C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\bin\Debug\ComponentFactory.Krypton.Toolkit.dll
 C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\bin\Debug\ComponentFactory.Krypton.Toolkit.pdb
+C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\CapaPresentacion\bin\Debug\ComponentFactory.Krypton.Toolkit.pdb
+C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacion.FrmSelectTrip.resources
+C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacion.FrmShowTrip.resources
+C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacion.FrmBanco.resources

@@ -29,7 +29,7 @@ namespace CapaPresentacion
 
             lblFechaI.Text = $"{trip.fechaInicio}";
             lblFechaD.Text = trip.fechaFin == new DateTime() ? "En curso" : $"{trip.fechaFin}";
-            lblPrecio.Text = $"Precio - {trip.precio}€";
+            lblPrecio.Text = $"Precio - {trip.precio:0.##}€";
         }
 
     }

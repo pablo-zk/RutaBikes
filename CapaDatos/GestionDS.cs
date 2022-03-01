@@ -68,7 +68,7 @@ namespace CapaDatos
                 vi.precio,
                 vi.IsidAnclajeIniNull() ? null : dsBikes.Anclaje.FindByid(vi.idAnclajeIni).EstacionRow.ubicacion,
                 vi.IsidAnclajeFinNull() ? null : dsBikes.Anclaje.FindByid(vi.idAnclajeFin).EstacionRow.ubicacion
-                )).ToList();
+                )).OrderBy(vi => vi.fechaInicio).ToList();
         }
 
         public ViajeDTO ObtenerViajePorId(int idViaje)

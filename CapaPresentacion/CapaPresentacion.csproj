@@ -42,6 +42,7 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System">
       <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
     </Reference>
@@ -95,11 +96,11 @@
     <Compile Include="FrmUser.Designer.cs">
       <DependentUpon>FrmUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmViaje.cs">
+    <Compile Include="FrmBanco.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmViaje.Designer.cs">
-      <DependentUpon>FrmViaje.cs</DependentUpon>
+    <Compile Include="FrmBanco.Designer.cs">
+      <DependentUpon>FrmBanco.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -121,8 +122,8 @@
     <EmbeddedResource Include="FrmUser.resx">
       <DependentUpon>FrmUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmViaje.resx">
-      <DependentUpon>FrmViaje.cs</DependentUpon>
+    <EmbeddedResource Include="FrmBanco.resx">
+      <DependentUpon>FrmBanco.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -172,6 +173,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Fotos\linea-viaje-tumbada.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Fotos\CreditCard.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

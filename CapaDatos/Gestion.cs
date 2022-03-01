@@ -195,5 +195,21 @@ namespace CapaDatos
             String estacionFin = viaje.idAnclajeIni != null ?  bikeEntities.Anclajes.Find(viaje.idAnclajeFin).Estacion.ubicacion : null;
             return new ViajeDTO(viaje.id, viaje.fechaInicio, viaje.fechaFin, viaje.precio, estacionOrigen, estacionFin);
         }
+
+        public Boolean RecargarMondedero(int idUser, double cantidad)
+        {
+            Usuario userActual = bikeEntities.Usuarios.Find(idUser);
+            try
+            {
+                userActual.monedero += cantidad;
+                var filas = bikeEntities.SaveChanges();
+                if (filas == 0) return false;
+            }
+            catch(Exception e)
+            {
+                return false;
+            }
+            return true;
+        }
     }
 }

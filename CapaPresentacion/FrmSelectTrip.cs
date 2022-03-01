@@ -79,12 +79,21 @@ namespace CapaPresentacion
                         $"Precio: {viaje.precio}\n" +
                         $"Para más información dirigete a 'Mis viajes'" :
                         error);
-                    Close();
+                    if (error == "")
+                    {
+                        Close();
+                    }
+                    
                 }
                 else
                 {
                     string result = Program.gestor.IniciarViaje(Program.userActive.id, int.Parse(idAnclaje), DateTime.Now);
                     MessageBox.Show(result);
+                    if (result.Contains("creado"))
+                    {
+                        Close();
+                    }
+                    
                 }
             }
             //NO ME CONVENCE NADA

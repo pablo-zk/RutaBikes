@@ -22,15 +22,26 @@ namespace CapaPresentacion
         {
             
             List<ViajeDTO> viajes = Program.gestorDS.HistorialViajesUser(Program.userActive.id);
-            dgvTrips.DataSource = viajes.Select(viaje => new
+
+            if (viajes.Count == 0)
             {
-                IdViaje = viaje.id,
-                FechaIncial = viaje.fechaInicio == new DateTime() ? "-" : viaje.fechaInicio.Date.ToShortDateString(),
-                EstacionOrigen = viaje.estacionOrigen + " - " + viaje.idAnclajeIni,
-                EstacionDestino = viaje.estacionDestino == null ? "-" : viaje.estacionDestino + " - " + viaje.idAnclajeFin,
-                Estado = viaje.estacionDestino == null ? "En curso" : "Finalizado"
-            }).ToArray();
-            dgvTrips.Columns["IdViaje"].Visible = false;
+                dgvTrips.Visible = false;
+            }
+            else
+            {
+                dgvTrips.DataSource = viajes.Select(viaje => new
+                {
+                    IdViaje = viaje.id,
+                    FechaIncial = viaje.fechaInicio == new DateTime() ? "-" : viaje.fechaInicio.Date.ToShortDateString(),
+                    EstacionOrigen = viaje.estacionOrigen + " - " + viaje.idAnclajeIni,
+                    EstacionDestino = viaje.estacionDestino == null ? "-" : viaje.estacionDestino + " - " + viaje.idAnclajeFin,
+                    Estado = viaje.estacionDestino == null ? "En curso" : "Finalizado"
+                }).ToArray();
+                dgvTrips.Columns["IdViaje"].Visible = false;
+                pictureWait.Visible = false;
+                lblM.Visible = false;
+            }
+            
         }
         private void FrmDetailTrips_FormClosed(object sender, FormClosedEventArgs e)
         {

@@ -65,7 +65,6 @@ C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacio
 C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacion.FrmSelectTrip.resources
 C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacion.FrmLogin.resources
 C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacion.FrmUser.resources
-C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacion.FrmViaje.resources
 C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacion.Properties.Resources.resources
 C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
 C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
@@ -73,9 +72,9 @@ C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacio
 C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacion.exe
 C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
 C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacion.FrmShowTrip.resources
-C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\bin\Debug\ComponentFactory.Krypton.Toolkit.dll
 C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\bin\Debug\ComponentFactory.Krypton.Toolkit.pdb
 C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\CapaPresentacion\bin\Debug\ComponentFactory.Krypton.Toolkit.pdb
 C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacion.FrmSelectTrip.resources
 C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacion.FrmShowTrip.resources
 C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacion.FrmBanco.resources
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacion.FrmBanco.resources

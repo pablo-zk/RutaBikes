@@ -18,52 +18,6 @@ namespace CapaPresentacion
             InitializeComponent();
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
-            if(txtEmail.Text.Equals("") || txtTelefono.Text.Equals("") || txtNumCuenta.Text.Equals(""))
-            {
-                MessageBox.Show("No puede haber datos vacíos.");
-                return;
-            }
-            if (!int.TryParse(txtTelefono.Text, out int telefonoInt) || txtTelefono.Text.Length != 9)
-            {
-                MessageBox.Show("Número de teléfono inválido");
-                return;
-            }
-            if (txtNumCuenta.Text.Length != 20)
-            {
-                MessageBox.Show("Número de cuenta inválido");
-                return;
-            }
-            Usuario userFinal;
-            string error;
-            if (chkCambiarPass.Checked)
-            {
-                if(txtContrasena.Text.Equals("") || txtRepContrasena.Text.Equals("") || !txtContrasena.Text.Equals(txtRepContrasena.Text))
-                {
-                    MessageBox.Show("Contraseñas no coinciden.");
-                    return;
-                }
-                userFinal = Program.gestor.ModificarUsuario(Program.userActive.id, txtEmail.Text, telefonoInt, txtNumCuenta.Text, txtContrasena.Text, out error);
-            }
-            else
-            {
-                userFinal = Program.gestor.ModificarUsuario(Program.userActive.id, txtEmail.Text, telefonoInt, txtNumCuenta.Text, out error);
-            }
-            if (userFinal == null)
-            {
-                MessageBox.Show(error);
-                return;
-            }
-            Program.userActive = userFinal;
-            MessageBox.Show("Usuario modificado correctamente.");
-            Close();
-        }
 
         private void FrmUser_Load(object sender, EventArgs e)
         {
@@ -92,6 +46,54 @@ namespace CapaPresentacion
         {
             FrmHome frmH = new FrmHome();
             frmH.Visible = true;
+        }
+
+
+        private void btnModificar_Click_1(object sender, EventArgs e)
+        {
+            if (txtEmail.Text.Equals("") || txtTelefono.Text.Equals("") || txtNumCuenta.Text.Equals(""))
+            {
+                MessageBox.Show("No puede haber datos vacíos.");
+                return;
+            }
+            if (!int.TryParse(txtTelefono.Text, out int telefonoInt) || txtTelefono.Text.Length != 9)
+            {
+                MessageBox.Show("Número de teléfono inválido");
+                return;
+            }
+            if (txtNumCuenta.Text.Length != 20)
+            {
+                MessageBox.Show("Número de cuenta inválido");
+                return;
+            }
+            Usuario userFinal;
+            string error;
+            if (chkCambiarPass.Checked)
+            {
+                if (txtContrasena.Text.Equals("") || txtRepContrasena.Text.Equals("") || !txtContrasena.Text.Equals(txtRepContrasena.Text))
+                {
+                    MessageBox.Show("Contraseñas no coinciden.");
+                    return;
+                }
+                userFinal = Program.gestor.ModificarUsuario(Program.userActive.id, txtEmail.Text, telefonoInt, txtNumCuenta.Text, txtContrasena.Text, out error);
+            }
+            else
+            {
+                userFinal = Program.gestor.ModificarUsuario(Program.userActive.id, txtEmail.Text, telefonoInt, txtNumCuenta.Text, out error);
+            }
+            if (userFinal == null)
+            {
+                MessageBox.Show(error);
+                return;
+            }
+            Program.userActive = userFinal;
+            MessageBox.Show("Usuario modificado correctamente.");
+            Close();
+        }
+
+        private void btnCancelar_Click_1(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

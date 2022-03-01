@@ -64,6 +64,11 @@ namespace CapaPresentacion
             // btnViaje
             // 
             this.btnViaje.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(184)))), ((int)(((byte)(255)))));
+            this.btnViaje.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(170)))), ((int)(((byte)(252)))));
+            this.btnViaje.FlatAppearance.BorderSize = 3;
+            this.btnViaje.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(170)))), ((int)(((byte)(252)))));
+            this.btnViaje.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(170)))), ((int)(((byte)(252)))));
+            this.btnViaje.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnViaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViaje.Location = new System.Drawing.Point(28, 255);
             this.btnViaje.Name = "btnViaje";
@@ -76,6 +81,12 @@ namespace CapaPresentacion
             // btnHistorial
             // 
             this.btnHistorial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(184)))), ((int)(((byte)(255)))));
+            this.btnHistorial.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(170)))), ((int)(((byte)(252)))));
+            this.btnHistorial.FlatAppearance.BorderSize = 3;
+            this.btnHistorial.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(170)))), ((int)(((byte)(252)))));
+            this.btnHistorial.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(170)))), ((int)(((byte)(252)))));
+            this.btnHistorial.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(170)))), ((int)(((byte)(252)))));
+            this.btnHistorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHistorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHistorial.Location = new System.Drawing.Point(218, 255);
             this.btnHistorial.Name = "btnHistorial";
@@ -88,6 +99,12 @@ namespace CapaPresentacion
             // btnRecargar
             // 
             this.btnRecargar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(184)))), ((int)(((byte)(255)))));
+            this.btnRecargar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(170)))), ((int)(((byte)(252)))));
+            this.btnRecargar.FlatAppearance.BorderSize = 3;
+            this.btnRecargar.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(170)))), ((int)(((byte)(252)))));
+            this.btnRecargar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(170)))), ((int)(((byte)(252)))));
+            this.btnRecargar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(170)))), ((int)(((byte)(252)))));
+            this.btnRecargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRecargar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRecargar.Location = new System.Drawing.Point(28, 330);
             this.btnRecargar.Name = "btnRecargar";
@@ -100,6 +117,12 @@ namespace CapaPresentacion
             // btnUsuario
             // 
             this.btnUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(184)))), ((int)(((byte)(255)))));
+            this.btnUsuario.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(170)))), ((int)(((byte)(252)))));
+            this.btnUsuario.FlatAppearance.BorderSize = 3;
+            this.btnUsuario.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(170)))), ((int)(((byte)(252)))));
+            this.btnUsuario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(170)))), ((int)(((byte)(252)))));
+            this.btnUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(170)))), ((int)(((byte)(252)))));
+            this.btnUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsuario.Location = new System.Drawing.Point(218, 330);
             this.btnUsuario.Name = "btnUsuario";

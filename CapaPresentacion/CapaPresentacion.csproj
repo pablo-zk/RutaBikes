@@ -177,5 +177,17 @@
   <ItemGroup>
     <None Include="bin\Fotos\CreditCard.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Fotos\Login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Fotos\FotoTripSelect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Fotos\FotoTripSelectB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Fotos\Waiting-Trip.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

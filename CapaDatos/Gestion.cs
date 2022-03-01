@@ -27,6 +27,7 @@ namespace CapaDatos
             Usuario newUser = new Usuario(email, contrasena, telefono, numCuenta, monedero);
             try
             {
+                newUser.Viajes = new List<Viaje>();
                 bikeEntities.Usuarios.Add(newUser);
                 var nFilas = bikeEntities.SaveChanges();
                 if (nFilas == 0) {
@@ -131,6 +132,7 @@ namespace CapaDatos
                 userTrip.fechaFin = fechaFin;
                 userTrip.precio = precioFinal;
                 userTrip.idAnclajeFin = idAnclajeFin;
+                user.monedero -= precioFinal;
 
                 //Añadir la bicicleta al anclaje nuevo
                 anclaje.Bicicleta = bici;

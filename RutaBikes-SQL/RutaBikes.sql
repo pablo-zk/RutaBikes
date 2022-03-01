@@ -30,7 +30,7 @@ CREATE TABLE Viaje(
 	id int primary key not null IDENTITY(1,1),
 	idUser int foreign key references Usuario(id),
 	idBici int foreign key references Bicicleta(id),
-	fechaInicio datetime2 not null,
+	fechaInicio datetime2,
 	fechaFin datetime2 not null,
 	idAnclajeIni int foreign key references Anclaje(id),
 	idAnclajeFin int foreign key references Anclaje(id),

@@ -29,131 +29,129 @@ namespace CapaPresentacion
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvEstaciones = new System.Windows.Forms.DataGridView();
+            this.lblBienvenida = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvAnclaje = new System.Windows.Forms.DataGridView();
-            this.lblAnclaje = new System.Windows.Forms.Label();
-            this.btnIniciarViaje = new System.Windows.Forms.Button();
-            this.btnLogout = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.opcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.misViajesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEstaciones)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAnclaje)).BeginInit();
-            this.menuStrip1.SuspendLayout();
+            this.btnViaje = new System.Windows.Forms.Button();
+            this.btnHistorial = new System.Windows.Forms.Button();
+            this.btnRecargar = new System.Windows.Forms.Button();
+            this.btnUsuario = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgvEstaciones
+            // lblBienvenida
             // 
-            this.dgvEstaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEstaciones.Location = new System.Drawing.Point(37, 107);
-            this.dgvEstaciones.Name = "dgvEstaciones";
-            this.dgvEstaciones.Size = new System.Drawing.Size(513, 150);
-            this.dgvEstaciones.TabIndex = 0;
-            this.dgvEstaciones.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEstaciones_CellClick);
+            this.lblBienvenida.AutoSize = true;
+            this.lblBienvenida.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBienvenida.Location = new System.Drawing.Point(25, 87);
+            this.lblBienvenida.Name = "lblBienvenida";
+            this.lblBienvenida.Size = new System.Drawing.Size(336, 37);
+            this.lblBienvenida.TabIndex = 0;
+            this.lblBienvenida.Text = "Bienvenido a@a.com";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(33, 70);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(93, 175);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 20);
+            this.label1.Size = new System.Drawing.Size(201, 25);
             this.label1.TabIndex = 1;
-            this.label1.Text = "ESTACIONES";
+            this.label1.Text = "¿Qué desea hacer?";
             // 
-            // dgvAnclaje
+            // btnViaje
             // 
-            this.dgvAnclaje.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAnclaje.Location = new System.Drawing.Point(330, 272);
-            this.dgvAnclaje.Name = "dgvAnclaje";
-            this.dgvAnclaje.Size = new System.Drawing.Size(421, 150);
-            this.dgvAnclaje.TabIndex = 2;
+            this.btnViaje.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(184)))), ((int)(((byte)(255)))));
+            this.btnViaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViaje.Location = new System.Drawing.Point(28, 255);
+            this.btnViaje.Name = "btnViaje";
+            this.btnViaje.Size = new System.Drawing.Size(140, 55);
+            this.btnViaje.TabIndex = 3;
+            this.btnViaje.Text = "Iniciar Viaje";
+            this.btnViaje.UseVisualStyleBackColor = false;
+            this.btnViaje.Click += new System.EventHandler(this.btnViaje_Click);
             // 
-            // lblAnclaje
+            // btnHistorial
             // 
-            this.lblAnclaje.AutoSize = true;
-            this.lblAnclaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAnclaje.Location = new System.Drawing.Point(651, 237);
-            this.lblAnclaje.Name = "lblAnclaje";
-            this.lblAnclaje.Size = new System.Drawing.Size(100, 20);
-            this.lblAnclaje.TabIndex = 3;
-            this.lblAnclaje.Text = "ANCLAJES";
+            this.btnHistorial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(184)))), ((int)(((byte)(255)))));
+            this.btnHistorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHistorial.Location = new System.Drawing.Point(218, 255);
+            this.btnHistorial.Name = "btnHistorial";
+            this.btnHistorial.Size = new System.Drawing.Size(140, 55);
+            this.btnHistorial.TabIndex = 4;
+            this.btnHistorial.Text = "Mis viajes";
+            this.btnHistorial.UseVisualStyleBackColor = false;
+            this.btnHistorial.Click += new System.EventHandler(this.btnHistorial_Click);
             // 
-            // btnIniciarViaje
+            // btnRecargar
             // 
-            this.btnIniciarViaje.Location = new System.Drawing.Point(89, 336);
-            this.btnIniciarViaje.Name = "btnIniciarViaje";
-            this.btnIniciarViaje.Size = new System.Drawing.Size(156, 48);
-            this.btnIniciarViaje.TabIndex = 4;
-            this.btnIniciarViaje.Text = "ABRIR VIAJE";
-            this.btnIniciarViaje.UseVisualStyleBackColor = true;
-            this.btnIniciarViaje.Click += new System.EventHandler(this.btnIniciarViaje_Click);
+            this.btnRecargar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(184)))), ((int)(((byte)(255)))));
+            this.btnRecargar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecargar.Location = new System.Drawing.Point(28, 330);
+            this.btnRecargar.Name = "btnRecargar";
+            this.btnRecargar.Size = new System.Drawing.Size(140, 55);
+            this.btnRecargar.TabIndex = 5;
+            this.btnRecargar.Text = "Recargar monedero";
+            this.btnRecargar.UseVisualStyleBackColor = false;
+            this.btnRecargar.Click += new System.EventHandler(this.btnRecargar_Click);
             // 
-            // btnLogout
+            // btnUsuario
             // 
-            this.btnLogout.Location = new System.Drawing.Point(741, 12);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(47, 26);
-            this.btnLogout.TabIndex = 5;
-            this.btnLogout.Text = "->";
-            this.btnLogout.UseVisualStyleBackColor = true;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            this.btnUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(184)))), ((int)(((byte)(255)))));
+            this.btnUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuario.Location = new System.Drawing.Point(218, 330);
+            this.btnUsuario.Name = "btnUsuario";
+            this.btnUsuario.Size = new System.Drawing.Size(140, 55);
+            this.btnUsuario.TabIndex = 6;
+            this.btnUsuario.Text = "Usuario";
+            this.btnUsuario.UseVisualStyleBackColor = false;
+            this.btnUsuario.Click += new System.EventHandler(this.btnUsuario_Click);
             // 
-            // menuStrip1
+            // pictureBox2
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.opcionesToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
-            this.menuStrip1.TabIndex = 7;
-            this.menuStrip1.Text = "menuStrip1";
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = global::CapaPresentacion.Properties.Resources.logout;
+            this.pictureBox2.Location = new System.Drawing.Point(736, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(26, 30);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // opcionesToolStripMenuItem
+            // pictureBox1
             // 
-            this.opcionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.misViajesToolStripMenuItem,
-            this.modificarUsuarioToolStripMenuItem});
-            this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
-            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
-            this.opcionesToolStripMenuItem.Text = "Opciones";
-            // 
-            // misViajesToolStripMenuItem
-            // 
-            this.misViajesToolStripMenuItem.Name = "misViajesToolStripMenuItem";
-            this.misViajesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.misViajesToolStripMenuItem.Text = "Mis viajes";
-            this.misViajesToolStripMenuItem.Click += new System.EventHandler(this.misViajesToolStripMenuItem_Click);
-            // 
-            // modificarUsuarioToolStripMenuItem
-            // 
-            this.modificarUsuarioToolStripMenuItem.Name = "modificarUsuarioToolStripMenuItem";
-            this.modificarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.modificarUsuarioToolStripMenuItem.Text = "Modificar usuario";
-            this.modificarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.modificarUsuarioToolStripMenuItem_Click);
+            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.FotoHome;
+            this.pictureBox1.Location = new System.Drawing.Point(332, 57);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(476, 352);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // FrmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnLogout);
-            this.Controls.Add(this.btnIniciarViaje);
-            this.Controls.Add(this.lblAnclaje);
-            this.Controls.Add(this.dgvAnclaje);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.lblBienvenida);
+            this.Controls.Add(this.btnUsuario);
+            this.Controls.Add(this.btnRecargar);
+            this.Controls.Add(this.btnHistorial);
+            this.Controls.Add(this.btnViaje);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dgvEstaciones);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmHome";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmHome";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmHome_FormClosed);
             this.Load += new System.EventHandler(this.FrmHome_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEstaciones)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAnclaje)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,15 +159,13 @@ namespace CapaPresentacion
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvEstaciones;
+        private System.Windows.Forms.Label lblBienvenida;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvAnclaje;
-        private System.Windows.Forms.Label lblAnclaje;
-        private System.Windows.Forms.Button btnIniciarViaje;
-        private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem opcionesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem misViajesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modificarUsuarioToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnViaje;
+        private System.Windows.Forms.Button btnHistorial;
+        private System.Windows.Forms.Button btnRecargar;
+        private System.Windows.Forms.Button btnUsuario;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

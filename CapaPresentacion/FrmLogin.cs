@@ -40,7 +40,7 @@ namespace CapaPresentacion
                 Program.userActive = userActive;
                 FrmHome frm = new FrmHome();
                 frm.Show();
-                Hide();
+                this.Visible = false;
             }
             else
             {
@@ -88,12 +88,14 @@ namespace CapaPresentacion
                 Program.userActive = newUserActive;
                 FrmHome frm = new FrmHome();
                 frm.Show();
-                Hide();
+                this.Visible = false;
             }
             else
             {
                 MessageBox.Show(error);
             }
         }
+
+
     }
 }

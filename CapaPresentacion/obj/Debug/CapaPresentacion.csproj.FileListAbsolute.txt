@@ -47,3 +47,32 @@ C:\Users\Usuario\source\repos\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentac
 C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacion.FrmDetailTrips.resources
 C:\Users\Usuario\source\repos\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacion.FrmDetailTrips.resources
 C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacion.FrmUser.resources
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\bin\Debug\CapaPresentacion.exe
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\bin\Debug\CapaDatos.dll
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\bin\Debug\Entidades.dll
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\bin\Debug\EntityFramework.dll
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\bin\Debug\EntityFramework.SqlServer.dll
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\bin\Debug\CapaDatos.pdb
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\bin\Debug\CapaDatos.dll.config
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\bin\Debug\Entidades.pdb
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\bin\Debug\Entidades.dll.config
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\bin\Debug\EntityFramework.xml
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\bin\Debug\EntityFramework.SqlServer.xml
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacion.csprojAssemblyReference.cache
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacion.FrmDetailTrips.resources
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacion.FrmHome.resources
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacion.FrmSelectTrip.resources
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacion.FrmLogin.resources
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacion.FrmUser.resources
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacion.FrmViaje.resources
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacion.Properties.Resources.resources
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CopyComplete
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacion.exe
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacion.FrmShowTrip.resources
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\bin\Debug\ComponentFactory.Krypton.Toolkit.dll
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\bin\Debug\ComponentFactory.Krypton.Toolkit.pdb

@@ -70,5 +70,24 @@ namespace CapaDatos
                 vi.IsidAnclajeFinNull() ? null : dsBikes.Anclaje.FindByid(vi.idAnclajeFin).EstacionRow.ubicacion
                 )).ToList();
         }
+
+        public ViajeDTO ObtenerViajePorId(int idViaje)
+        {
+            //Viaje viaje = bikeEntities.Viajes.FirstOrDefault(vi => vi.id == idViaje);
+            //String estacionOrigen = bikeEntities.Anclajes.Find(viaje.idAnclajeIni).Estacion.ubicacion;
+            //String estacionFin = viaje.idAnclajeIni != null ? bikeEntities.Anclajes.Find(viaje.idAnclajeFin).Estacion.ubicacion : null;
+            //return new ViajeDTO(viaje.id, viaje.fechaInicio, viaje.fechaFin, viaje.precio, estacionOrigen, estacionFin);
+            daViaje.Fill(dsBikes.Viaje);
+            daEstacion.Fill(dsBikes.Estacion);
+            daAnclaje.Fill(dsBikes.Anclaje);
+            return dsBikes.Viaje.Where(vi => vi.id == idViaje).Select(vi => new ViajeDTO(
+                vi.id, 
+                vi.fechaInicio, 
+                vi.fechaFin, 
+                vi.precio,
+                vi.IsidAnclajeIniNull() ? null : dsBikes.Anclaje.FindByid(vi.idAnclajeIni).EstacionRow.ubicacion,
+                vi.IsidAnclajeFinNull() ? null : dsBikes.Anclaje.FindByid(vi.idAnclajeFin).EstacionRow.ubicacion
+                )).FirstOrDefault();
+        }
     }
 }

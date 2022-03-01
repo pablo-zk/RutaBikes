@@ -87,5 +87,11 @@ namespace CapaPresentacion
                 grpCambiarPass.Enabled = false;
             }
         }
+
+        private void FrmUser_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            FrmHome frmH = new FrmHome();
+            frmH.Visible = true;
+        }
     }
 }

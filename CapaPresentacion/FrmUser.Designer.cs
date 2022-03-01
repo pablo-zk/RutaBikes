@@ -197,7 +197,9 @@ namespace CapaPresentacion
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label1);
             this.Name = "FrmUser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmUser";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmUser_FormClosed);
             this.Load += new System.EventHandler(this.FrmUser_Load);
             this.grpCambiarPass.ResumeLayout(false);
             this.grpCambiarPass.PerformLayout();

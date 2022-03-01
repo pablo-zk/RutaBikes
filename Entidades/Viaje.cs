@@ -40,16 +40,6 @@ namespace Entidades
             Usuario = usuario;
         }
 
-        public Viaje(int id, int? idUser, DateTime fechaInicio, DateTime fechaFin, int? idAnclajeIni, int? idAnclajeFin, double precio)
-        {
-            this.id = id;
-            this.idUser = idUser;
-            this.fechaInicio = fechaInicio;
-            this.fechaFin = fechaFin;
-            this.idAnclajeIni = idAnclajeIni;
-            this.idAnclajeFin = idAnclajeFin;
-            this.precio = precio;
-        }
 
         public Viaje(int id, int? idUser,string idBici ,DateTime fechaInicio, DateTime fechaFin, int? idAnclajeIni, int? idAnclajeFin, double precio)
         {
@@ -60,6 +50,14 @@ namespace Entidades
             this.fechaFin = fechaFin;
             this.idAnclajeIni = idAnclajeIni;
             this.idAnclajeFin = idAnclajeFin;
+            this.precio = precio;
+        }
+
+        public Viaje(int id, DateTime fechaInicio, DateTime fechaFin, double precio)
+        {
+            this.id = id;
+            this.fechaInicio = fechaInicio;
+            this.fechaFin = fechaFin;
             this.precio = precio;
         }
     }

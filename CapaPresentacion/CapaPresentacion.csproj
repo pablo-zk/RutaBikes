@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ComponentFactory.Krypton.Toolkit">
+      <HintPath>..\..\..\..\..\Users\Usuario\Desktop\Krypton\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -44,6 +47,7 @@
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -67,11 +71,23 @@
     <Compile Include="FrmHome.Designer.cs">
       <DependentUpon>FrmHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmSelectTrip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSelectTrip.Designer.cs">
+      <DependentUpon>FrmSelectTrip.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmShowTrip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmShowTrip.Designer.cs">
+      <DependentUpon>FrmShowTrip.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmUser.cs">
       <SubType>Form</SubType>
@@ -93,8 +109,14 @@
     <EmbeddedResource Include="FrmHome.resx">
       <DependentUpon>FrmHome.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmSelectTrip.resx">
+      <DependentUpon>FrmSelectTrip.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmShowTrip.resx">
+      <DependentUpon>FrmShowTrip.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUser.resx">
       <DependentUpon>FrmUser.cs</DependentUpon>
@@ -110,6 +132,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -134,6 +157,21 @@
       <Project>{4867afd7-1bd7-48ab-ac02-f520f4003186}</Project>
       <Name>Entidades</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Fotos\FotoHome.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Fotos\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Fotos\FotoViaje.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Fotos\linea-viaje.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Fotos\linea-viaje-tumbada.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

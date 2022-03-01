@@ -22,3 +22,15 @@ C:\Users\Usuario\source\repos\RutaBikes\Entidades\obj\Debug\Entidades.csproj.Cor
 C:\Users\Usuario\source\repos\RutaBikes\Entidades\obj\Debug\Entidades.csproj.CopyComplete
 C:\Users\Usuario\source\repos\RutaBikes\Entidades\obj\Debug\Entidades.dll
 C:\Users\Usuario\source\repos\RutaBikes\Entidades\obj\Debug\Entidades.pdb
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\Entidades\bin\Debug\Entidades.dll.config
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\Entidades\bin\Debug\Entidades.dll
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\Entidades\bin\Debug\Entidades.pdb
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\Entidades\bin\Debug\EntityFramework.dll
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\Entidades\bin\Debug\EntityFramework.SqlServer.dll
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\Entidades\bin\Debug\EntityFramework.xml
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\Entidades\bin\Debug\EntityFramework.SqlServer.xml
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\Entidades\obj\Debug\Entidades.csproj.CopyComplete
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\Entidades\obj\Debug\Entidades.dll
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\Entidades\obj\Debug\Entidades.pdb

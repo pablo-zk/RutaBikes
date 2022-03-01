@@ -56,7 +56,8 @@ namespace CapaDatos
         {
             return dsBikes.Viaje.Where(vi => vi.idUser.Equals(idUser)).Select(vi => new ViajeDTO(
                 vi.id, 
-                vi.idUser, 
+                vi.idUser,
+                vi.idBici, 
                 vi.fechaInicio, 
                 vi.fechaFin, 
                 vi.IsidAnclajeIniNull() ? -1 : vi.idAnclajeIni,

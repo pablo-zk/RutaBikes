@@ -13,10 +13,11 @@ namespace Entidades
 
         public ViajeDTO() { }
 
-        public ViajeDTO(int id, int? idUser,string idBici, DateTime fechaInicio, DateTime fechaFin, int? idAnclajeIni, int? idAnclajeFin, double precio, string estacionOrigen, string estacionDestino):base( id,  idUser, idBici,  fechaInicio,  fechaFin,  idAnclajeIni, idAnclajeFin, precio)
+        public ViajeDTO(int id, int? idUser, string idBici, DateTime fechaInicio, DateTime fechaFin, int? idAnclajeIni, int? idAnclajeFin, double precio, string estacionOrigen, string estacionDestino):base( id, idUser, idBici ,fechaInicio,  fechaFin,  idAnclajeIni, idAnclajeFin, precio)
         {
             this.estacionOrigen = estacionOrigen;
             this.estacionDestino = estacionDestino;
         }
+
     }
 }

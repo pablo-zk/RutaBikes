@@ -50,12 +50,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Gestion.cs" />
+    <Compile Include="DSBikes.cs">
+      <DependentUpon>DSBikes.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DSBikes.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DSBikes.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Gestion.cs" />
     <Compile Include="GestionDS.cs" />
     <Compile Include="ModeloBikes.Context.cs">
       <AutoGen>True</AutoGen>
@@ -76,6 +79,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
+    <EntityDeploy Include="ModeloBikes.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModeloBikes.Designer.cs</LastGenOutput>
+    </EntityDeploy>
     <None Include="DSBikes.xsc">
       <DependentUpon>DSBikes.xsd</DependentUpon>
     </None>
@@ -87,10 +94,6 @@
     <None Include="DSBikes.xss">
       <DependentUpon>DSBikes.xsd</DependentUpon>
     </None>
-    <EntityDeploy Include="ModeloBikes.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModeloBikes.Designer.cs</LastGenOutput>
-    </EntityDeploy>
     <None Include="ModeloBikes.edmx.diagram">
       <DependentUpon>ModeloBikes.edmx</DependentUpon>
     </None>

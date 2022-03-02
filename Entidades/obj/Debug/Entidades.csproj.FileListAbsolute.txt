@@ -1,0 +1,36 @@
+C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\Entidades\bin\Debug\Entidades.dll.config
+C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\Entidades\bin\Debug\Entidades.dll
+C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\Entidades\bin\Debug\Entidades.pdb
+C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\Entidades\bin\Debug\EntityFramework.dll
+C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\Entidades\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\Entidades\bin\Debug\EntityFramework.xml
+C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\Entidades\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\Entidades\obj\Debug\Entidades.csproj.CopyComplete
+C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\Entidades\obj\Debug\Entidades.dll
+C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Usuario\source\repos\RutaBikes\Entidades\bin\Debug\Entidades.dll.config
+C:\Users\Usuario\source\repos\RutaBikes\Entidades\bin\Debug\Entidades.dll
+C:\Users\Usuario\source\repos\RutaBikes\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Usuario\source\repos\RutaBikes\Entidades\bin\Debug\EntityFramework.dll
+C:\Users\Usuario\source\repos\RutaBikes\Entidades\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Usuario\source\repos\RutaBikes\Entidades\bin\Debug\EntityFramework.xml
+C:\Users\Usuario\source\repos\RutaBikes\Entidades\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Usuario\source\repos\RutaBikes\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\Usuario\source\repos\RutaBikes\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\RutaBikes\Entidades\obj\Debug\Entidades.csproj.CopyComplete
+C:\Users\Usuario\source\repos\RutaBikes\Entidades\obj\Debug\Entidades.dll
+C:\Users\Usuario\source\repos\RutaBikes\Entidades\obj\Debug\Entidades.pdb
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\Entidades\bin\Debug\Entidades.dll.config
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\Entidades\bin\Debug\Entidades.dll
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\Entidades\bin\Debug\Entidades.pdb
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\Entidades\bin\Debug\EntityFramework.dll
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\Entidades\bin\Debug\EntityFramework.SqlServer.dll
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\Entidades\bin\Debug\EntityFramework.xml
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\Entidades\bin\Debug\EntityFramework.SqlServer.xml
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\Entidades\obj\Debug\Entidades.csproj.CopyComplete
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\Entidades\obj\Debug\Entidades.dll
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\Entidades\obj\Debug\Entidades.pdb

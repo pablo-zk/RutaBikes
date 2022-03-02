@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{70F79BA0-D1CF-44E0-8792-B3112968D684}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CapaPresentacion</RootNamespace>
+    <AssemblyName>CapaPresentacion</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ComponentFactory.Krypton.Toolkit">
+      <HintPath>..\..\..\..\..\Users\Usuario\Desktop\Krypton\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FrmDetailTrips.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDetailTrips.Designer.cs">
+      <DependentUpon>FrmDetailTrips.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHome.Designer.cs">
+      <DependentUpon>FrmHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSelectTrip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSelectTrip.Designer.cs">
+      <DependentUpon>FrmSelectTrip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmShowTrip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmShowTrip.Designer.cs">
+      <DependentUpon>FrmShowTrip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUser.Designer.cs">
+      <DependentUpon>FrmUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBanco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBanco.Designer.cs">
+      <DependentUpon>FrmBanco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVerificacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVerificacion.Designer.cs">
+      <DependentUpon>FrmVerificacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmDetailTrips.resx">
+      <DependentUpon>FrmDetailTrips.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHome.resx">
+      <DependentUpon>FrmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSelectTrip.resx">
+      <DependentUpon>FrmSelectTrip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmShowTrip.resx">
+      <DependentUpon>FrmShowTrip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUser.resx">
+      <DependentUpon>FrmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBanco.resx">
+      <DependentUpon>FrmBanco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVerificacion.resx">
+      <DependentUpon>FrmVerificacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaDatos\CapaDatos.csproj">
+      <Project>{2d78dc92-6b83-4698-936a-d6af183b8025}</Project>
+      <Name>CapaDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{4867afd7-1bd7-48ab-ac02-f520f4003186}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Fotos\FotoHome.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Fotos\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Fotos\FotoViaje.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Fotos\linea-viaje.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Fotos\linea-viaje-tumbada.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Fotos\CreditCard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Fotos\Login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Fotos\FotoTripSelect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Fotos\FotoTripSelectB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Fotos\Waiting-Trip.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

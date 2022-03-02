@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RutaBikesDbModelStoreContainer" CdmEntityContainer="RutaBikesDbEntitiesN">
+    <EntitySetMapping Name="Anclajes">
+      <EntityTypeMapping TypeName="RutaBikesDbModel.Anclaje">
+        <MappingFragment StoreEntitySet="Anclaje">
+          <ScalarProperty Name="idEstacion" ColumnName="idEstacion" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idBici" ColumnName="idBici" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bicicletas">
+      <EntityTypeMapping TypeName="RutaBikesDbModel.Bicicleta">
+        <MappingFragment StoreEntitySet="Bicicleta">
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Estacions">
+      <EntityTypeMapping TypeName="RutaBikesDbModel.Estacion">
+        <MappingFragment StoreEntitySet="Estacion">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ubicacion" ColumnName="ubicacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tarifas">
+      <EntityTypeMapping TypeName="RutaBikesDbModel.Tarifa">
+        <MappingFragment StoreEntitySet="Tarifa">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="minTiempo" ColumnName="minTiempo" />
+          <ScalarProperty Name="maxTiempo" ColumnName="maxTiempo" />
+          <ScalarProperty Name="precioBase" ColumnName="precioBase" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="RutaBikesDbModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="contrasena" ColumnName="contrasena" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="numCuenta" ColumnName="numCuenta" />
+          <ScalarProperty Name="monedero" ColumnName="monedero" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Viajes">
+      <EntityTypeMapping TypeName="RutaBikesDbModel.Viaje">
+        <MappingFragment StoreEntitySet="Viaje">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idUser" ColumnName="idUser" />
+          <ScalarProperty Name="idBici" ColumnName="idBici" />
+          <ScalarProperty Name="fechaInicio" ColumnName="fechaInicio" />
+          <ScalarProperty Name="fechaFin" ColumnName="fechaFin" />
+          <ScalarProperty Name="idAnclajeIni" ColumnName="idAnclajeIni" />
+          <ScalarProperty Name="idAnclajeFin" ColumnName="idAnclajeFin" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -66,6 +66,11 @@ namespace CapaPresentacion
                 MessageBox.Show("Número de cuenta inválido");
                 return;
             }
+            if (!IsValidEmail(txtEmail.Text))
+            {
+                MessageBox.Show("Email incorrecto");
+                return;
+            }
             Usuario userFinal;
             string error;
             if (chkCambiarPass.Checked)
@@ -90,7 +95,18 @@ namespace CapaPresentacion
             MessageBox.Show("Usuario modificado correctamente.");
             Close();
         }
-
+        private bool IsValidEmail(string email)
+        {
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == email;
+            }
+            catch
+            {
+                return false;
+            }
+        }
         private void btnCancelar_Click_1(object sender, EventArgs e)
         {
             Close();

@@ -78,3 +78,4 @@ C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\CapaPre
 C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacion.FrmShowTrip.resources
 C:\Users\pablo\Desktop\2DAM\Acceso a datos\workspace_proyectos\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacion.FrmBanco.resources
 C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacion.FrmBanco.resources
+C:\2ºDAM\AD\Proyecto Final\RutaBikes\CapaPresentacion\obj\Debug\CapaPresentacion.FrmVerificacion.resources

@@ -81,7 +81,11 @@ namespace CapaPresentacion
                 MessageBox.Show("Número de cuenta inválido");
                 return;
             }
-            //Le paso como monedero 0€. Pensar si poner otro txt o frm con los datos de la cuenta y que meta el diner qeu tiene
+            if (!IsValidEmail(txtSignMail.Text))
+            {
+                MessageBox.Show("Email incorrecto");
+                return;
+            } 
             Usuario newUserActive = Program.gestor.Register(txtSignMail.Text, txtSignPass.Text,telefonoInt,txtSignNumCuenta.Text,0, out string error);
             if (newUserActive != null)
             {
@@ -96,9 +100,53 @@ namespace CapaPresentacion
             }
         }
 
+        private bool IsValidEmail(string email)
+        {
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == email;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
         private void FrmLogin_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void grpSignup_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkShowPass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkShowPass.Checked)
+            {
+                txtSignPass.PasswordChar = '\0';
+                txtSignRepeatPass.PasswordChar = '\0';
+            }
+            else
+            {
+                txtSignPass.PasswordChar = '*';
+                txtSignRepeatPass.PasswordChar = '*';
+            }
+        }
+
+        private void chkShowPassL_CheckedChanged(object sender, EventArgs e)
+        {   
+            if (chkShowPassL.Checked)
+            {
+                txtPass.PasswordChar = '\0';
+            }
+            else
+            {
+                txtPass.PasswordChar = '*';
+            }
         }
     }
 }

@@ -35,13 +35,12 @@ namespace CapaPresentacion
 
         private void btnRecargar_Click(object sender, EventArgs e)
         {
-            string pass = Interaction.InputBox("Verificación", "Introduce contraseña", "");
-
-            if (!pass.Equals(Program.userActive.contrasena))
+            FrmVerificacion frmV = new FrmVerificacion();
+            if (frmV.ShowDialog() != DialogResult.OK)
             {
-                MessageBox.Show("Contraseña incorrecta. Introduce otra.");
                 return;
             }
+
             if (!double.TryParse(txtCantidad.Text.Replace('.',','),out double cantidad))
             {
                 MessageBox.Show("Número incorrecto. Introduzca un valor numérico.");

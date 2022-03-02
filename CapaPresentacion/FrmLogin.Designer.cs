@@ -29,6 +29,7 @@ namespace CapaPresentacion
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
@@ -48,13 +49,15 @@ namespace CapaPresentacion
             this.label7 = new System.Windows.Forms.Label();
             this.txtSignNumCuenta = new System.Windows.Forms.TextBox();
             this.grpLogin = new System.Windows.Forms.GroupBox();
+            this.chkShowPassL = new System.Windows.Forms.CheckBox();
             this.linkSignup = new System.Windows.Forms.LinkLabel();
-            this.grpSignup = new System.Windows.Forms.GroupBox();
-            this.linkLogin = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.grpSignup = new System.Windows.Forms.GroupBox();
+            this.chkShowPass = new System.Windows.Forms.CheckBox();
+            this.linkLogin = new System.Windows.Forms.LinkLabel();
             this.grpLogin.SuspendLayout();
-            this.grpSignup.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.grpSignup.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtEmail
@@ -244,6 +247,7 @@ namespace CapaPresentacion
             // 
             // grpLogin
             // 
+            this.grpLogin.Controls.Add(this.chkShowPassL);
             this.grpLogin.Controls.Add(this.linkSignup);
             this.grpLogin.Controls.Add(this.label4);
             this.grpLogin.Controls.Add(this.txtPass);
@@ -258,6 +262,16 @@ namespace CapaPresentacion
             this.grpLogin.TabIndex = 20;
             this.grpLogin.TabStop = false;
             // 
+            // chkShowPassL
+            // 
+            this.chkShowPassL.AutoSize = true;
+            this.chkShowPassL.Location = new System.Drawing.Point(322, 249);
+            this.chkShowPassL.Name = "chkShowPassL";
+            this.chkShowPassL.Size = new System.Drawing.Size(15, 14);
+            this.chkShowPassL.TabIndex = 25;
+            this.chkShowPassL.UseVisualStyleBackColor = true;
+            this.chkShowPassL.CheckedChanged += new System.EventHandler(this.chkShowPassL_CheckedChanged);
+            // 
             // linkSignup
             // 
             this.linkSignup.AutoSize = true;
@@ -269,9 +283,20 @@ namespace CapaPresentacion
             this.linkSignup.Text = "Registrarse";
             this.linkSignup.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkSignup_LinkClicked);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.Login;
+            this.pictureBox1.Location = new System.Drawing.Point(51, 36);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(244, 170);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 24;
+            this.pictureBox1.TabStop = false;
+            // 
             // grpSignup
             // 
             this.grpSignup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.grpSignup.Controls.Add(this.chkShowPass);
             this.grpSignup.Controls.Add(this.lblRegistrarse);
             this.grpSignup.Controls.Add(this.linkLogin);
             this.grpSignup.Controls.Add(this.label7);
@@ -290,6 +315,17 @@ namespace CapaPresentacion
             this.grpSignup.Size = new System.Drawing.Size(347, 421);
             this.grpSignup.TabIndex = 21;
             this.grpSignup.TabStop = false;
+            this.grpSignup.Enter += new System.EventHandler(this.grpSignup_Enter);
+            // 
+            // chkShowPass
+            // 
+            this.chkShowPass.AutoSize = true;
+            this.chkShowPass.Location = new System.Drawing.Point(318, 149);
+            this.chkShowPass.Name = "chkShowPass";
+            this.chkShowPass.Size = new System.Drawing.Size(15, 14);
+            this.chkShowPass.TabIndex = 23;
+            this.chkShowPass.UseVisualStyleBackColor = true;
+            this.chkShowPass.CheckedChanged += new System.EventHandler(this.chkShowPass_CheckedChanged);
             // 
             // linkLogin
             // 
@@ -302,25 +338,18 @@ namespace CapaPresentacion
             this.linkLogin.Text = "Ya tengo una cuenta";
             this.linkLogin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLogin_LinkClicked);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.Login;
-            this.pictureBox1.Location = new System.Drawing.Point(51, 36);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(244, 170);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 24;
-            this.pictureBox1.TabStop = false;
-            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(346, 412);
+            this.ClientSize = new System.Drawing.Size(345, 412);
             this.Controls.Add(this.grpSignup);
             this.Controls.Add(this.grpLogin);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -328,9 +357,9 @@ namespace CapaPresentacion
             this.Load += new System.EventHandler(this.Form1_Load);
             this.grpLogin.ResumeLayout(false);
             this.grpLogin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.grpSignup.ResumeLayout(false);
             this.grpSignup.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -360,6 +389,8 @@ namespace CapaPresentacion
         private System.Windows.Forms.GroupBox grpSignup;
         private System.Windows.Forms.LinkLabel linkLogin;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.CheckBox chkShowPass;
+        private System.Windows.Forms.CheckBox chkShowPassL;
     }
 }
 

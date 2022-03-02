@@ -93,6 +93,7 @@ namespace CapaPresentacion
             this.btnSignup.TabIndex = 16;
             this.btnSignup.Text = "Cancelar";
             this.btnSignup.UseVisualStyleBackColor = false;
+            this.btnSignup.Click += new System.EventHandler(this.btnSignup_Click);
             // 
             // btnAceptar
             // 

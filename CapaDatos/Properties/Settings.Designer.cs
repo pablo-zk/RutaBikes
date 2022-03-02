@@ -26,8 +26,7 @@ namespace CapaDatos.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-VUHO4JO\\ASIERELORZA;Initial Catalog=RutaBikesDb;Integrated Se" +
-            "curity=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=RutaBikesDb;Integrated Security=True")]
         public string RutaBikesDbConnectionString {
             get {
                 return ((string)(this["RutaBikesDbConnectionString"]));

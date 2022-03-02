@@ -168,7 +168,7 @@ namespace CapaPresentacion
             this.MaximizeBox = false;
             this.Name = "FrmBanco";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmBanco";
+            this.Text = "Banco";
             this.Load += new System.EventHandler(this.FrmBanco_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

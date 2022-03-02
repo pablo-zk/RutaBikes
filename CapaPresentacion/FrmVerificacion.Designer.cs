@@ -131,7 +131,7 @@ namespace CapaPresentacion
             this.MaximizeBox = false;
             this.Name = "FrmVerificacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmVerificacion";
+            this.Text = "Verificar";
             this.Load += new System.EventHandler(this.FrmVerificacion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

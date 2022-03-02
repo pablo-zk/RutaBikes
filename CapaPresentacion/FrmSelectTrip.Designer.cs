@@ -118,7 +118,7 @@ namespace CapaPresentacion
             this.MaximizeBox = false;
             this.Name = "FrmSelectTrip";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmHome";
+            this.Text = "Viaje";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmSelectTrip_FormClosed);
             this.Load += new System.EventHandler(this.FrmHome_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstaciones)).EndInit();

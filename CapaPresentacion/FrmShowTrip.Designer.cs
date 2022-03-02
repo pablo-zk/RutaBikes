@@ -143,7 +143,7 @@ namespace CapaPresentacion
             this.MaximizeBox = false;
             this.Name = "FrmShowTrip";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmShowTrip";
+            this.Text = "Ver viaje";
             this.Load += new System.EventHandler(this.FrmShowTrip_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

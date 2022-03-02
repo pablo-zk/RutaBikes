@@ -106,7 +106,7 @@ namespace CapaPresentacion
             this.MaximizeBox = false;
             this.Name = "FrmDetailTrips";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmDetailTrips";
+            this.Text = "Historial";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmDetailTrips_FormClosed);
             this.Load += new System.EventHandler(this.FrmDetailTrips_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTrips)).EndInit();

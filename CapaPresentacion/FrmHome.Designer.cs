@@ -174,7 +174,7 @@ namespace CapaPresentacion
             this.MaximizeBox = false;
             this.Name = "FrmHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmHome";
+            this.Text = "Home";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmHome_FormClosed);
             this.Load += new System.EventHandler(this.FrmHome_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
